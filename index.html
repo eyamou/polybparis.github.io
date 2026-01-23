@@ -3,94 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PolyBParis | Import-Export & Stablecoin</title>
+    <title>PolyBParis | Import-Export Industriel & Blockchain</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans">
 
-    <nav class="flex justify-between items-center p-6 bg-white shadow-sm sticky top-0 z-50">
+    <nav class="flex justify-between items-center px-8 py-4 bg-white shadow-sm sticky top-0 z-50">
         <div class="flex items-center gap-3">
-            <img src="logo.svg" alt="Logo" style="width:45px; height:32px;">
-            <div class="text-2xl font-bold text-blue-900">PolyB<span class="text-emerald-500">Paris</span></div>
+            <img src="logo.svg" alt="Logo" class="w-10 h-10">
+            <span class="text-2xl font-bold text-blue-900">PolyBParis</span>
         </div>
-        <div class="hidden md:flex gap-8 font-medium">
-            <a href="#btp" class="hover:text-emerald-500">BTP & Engins</a>
-            <a href="#agri" class="hover:text-emerald-500">Agriculture</a>
-            <a href="#usdtz" class="hover:text-emerald-500 font-bold text-emerald-500">USDT.z</a>
+        <div class="hidden md:flex gap-8 font-medium text-sm">
+            <a href="#btp" class="hover:text-emerald-600 transition">Engins BTP</a>
+            <a href="#materiaux" class="hover:text-emerald-600 transition">Matériaux</a>
+            <a href="#agri" class="hover:text-emerald-600 transition">Agriculture</a>
+            <a href="#catalog" class="text-emerald-600 font-bold">Catalogue</a>
         </div>
-        <button onclick="connectWallet()" class="bg-blue-900 text-white px-6 py-2 rounded-full hover:bg-blue-800 transition">
-            <i class="fa-solid fa-wallet mr-2"></i> Connecter Wallet
+        <button onclick="connectWallet()" class="bg-blue-900 text-white px-6 py-2 rounded-xl font-bold hover:bg-blue-800 transition text-sm">
+            Connecter Wallet
         </button>
     </nav>
 
-    <header class="py-20 px-6 text-center bg-gradient-to-b from-blue-50 to-white">
-        <h1 class="text-5xl font-extrabold mb-6 text-slate-800">L'Import-Export Propulsé par la Blockchain</h1>
-        <p class="text-xl text-slate-600 max-w-2xl mx-auto mb-10">Solutions globales pour le BTP et l'Agriculture avec paiement sécurisé en USDT.z.</p>
-        <div class="flex justify-center gap-4">
+    <header class="py-20 px-6 text-center bg-gradient-to-b from-white to-slate-100">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 text-slate-900 leading-tight">L'Import-Export Propulsé par la Blockchain</h1>
+        <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-10">Solutions globales pour le BTP, l'Industrie et l'Agriculture avec paiement sécurisé en USDT.z.</p>
+        <div class="flex gap-4 justify-center">
             <a href="#catalog" class="bg-slate-800 text-white px-8 py-3 rounded-lg font-bold">Voir le Catalogue</a>
-            <a href="#usdtz" class="border-2 border-emerald-500 text-emerald-600 px-8 py-3 rounded-lg font-bold">Découvrir l'USDT.z</a>
+            <a href="#usdtz" class="border-2 border-emerald-500 text-emerald-600 px-8 py-3 rounded-lg font-bold">L'USDT.z</a>
         </div>
     </header>
 
     <section id="btp" class="py-16 px-6 max-w-6xl mx-auto">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div class="rounded-2xl overflow-hidden shadow-xl">
-                <img src="https://images.unsplash.com/photo-1579412690850-bd41cd0af397?q=80&w=800" alt="Excavatrice BTP" class="w-full h-64 object-cover">
+                <img src="https://images.unsplash.com/photo-1570575117194-3f5b4979b0cc?q=80&w=800" alt="Engins de chantier" class="w-full h-80 object-cover">
             </div>
             <div>
-                <h2 class="text-3xl font-bold mb-4">Matériel de Travaux Publics</h2>
-                <p class="text-lg text-slate-600">Pelles hydrauliques, grues, bulldozers. Nous sourçons le meilleur matériel avec une logistique simplifiée.</p>
+                <h2 class="text-3xl font-bold mb-4 text-blue-900">Engins de Travaux Publics</h2>
+                <p class="text-lg text-slate-600">Pelles hydrauliques, grues et bulldozers de dernière génération. Nous facilitons l'acquisition de machines lourdes via des transactions blockchain transparentes.</p>
             </div>
         </div>
     </section>
 
-    <section id="agri" class="py-16 px-6 max-w-6xl mx-auto bg-slate-50 rounded-3xl">
+    <section id="materiaux" class="py-16 px-6 max-w-6xl mx-auto bg-white rounded-3xl shadow-sm">
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-16 border-b pb-12">
+            <div class="order-2 md:order-1">
+                <h2 class="text-3xl font-bold mb-4 text-blue-900">Béton Cellulaire</h2>
+                <p class="text-lg text-slate-600">Importation de blocs isolants haute densité. Une solution thermique supérieure pour le gros œuvre industriel et résidentiel.</p>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-lg order-1 md:order-2">
+                <img src="https://images.unsplash.com/photo-1517646281044-a4e337dbc90b?q=80&w=800" alt="Blocs de béton" class="w-full h-64 object-cover">
+            </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 items-center pt-8">
+            <div class="rounded-2xl overflow-hidden shadow-lg">
+                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=800" alt="Panneaux préfabriqués" class="w-full h-64 object-cover">
+            </div>
+            <div>
+                <h2 class="text-3xl font-bold mb-4 text-blue-900">Panneaux Préfabriqués</h2>
+                <p class="text-lg text-slate-600">Systèmes constructifs modulaires prêts à poser. Idéal pour réduire les délais de construction et les coûts logistiques.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="agri" class="py-16 px-6 max-w-6xl mx-auto">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div class="order-2 md:order-1">
-                <h2 class="text-3xl font-bold mb-4">Solutions Agricoles</h2>
-                <p class="text-lg text-slate-600">Tracteurs, moissonneuses et systèmes d'irrigation. Optimisez vos rendements avec notre sélection internationale.</p>
+                <h2 class="text-3xl font-bold mb-4 text-emerald-700">Matériel Agricole</h2>
+                <p class="text-lg text-slate-600">Tracteurs de forte puissance et moissonneuses-batteuses. Nous soutenons la modernisation agricole avec des équipements robustes.</p>
             </div>
             <div class="rounded-2xl overflow-hidden shadow-xl order-1 md:order-2">
-                <img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?q=80&w=800" alt="Tracteur Agricole" class="w-full h-64 object-cover">
+                <img src="https://images.unsplash.com/photo-1530263302443-ec9f5424796a?q=80&w=800" alt="Tracteur moderne" class="w-full h-80 object-cover">
             </div>
         </div>
     </section>
 
-    <section id="catalog" class="py-20 px-6 max-w-6xl mx-auto">
-        <h2 class="text-4xl font-extrabold text-center mb-12">Catalogue Matériel</h2>
+    <section id="catalog" class="py-20 px-6 max-w-6xl mx-auto bg-slate-900 rounded-3xl text-white">
+        <h2 class="text-4xl font-extrabold text-center mb-12">Catalogue de Matériels</h2>
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition">
-                <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?q=80&w=400" class="w-full h-48 object-cover">
+            <div class="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700">
                 <div class="p-6">
-                    <h3 class="font-bold text-xl mb-2">Excavatrice 20T</h3>
-                    <p class="text-slate-500 text-sm mb-4">Modèle haute performance, idéal pour chantiers urbains.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-blue-900 font-bold">45,000 USDT.z</span>
-                        <button onclick="connectWallet()" class="bg-emerald-500 text-white px-4 py-2 rounded-lg text-sm font-bold">Acheter</button>
-                    </div>
+                    <span class="text-xs font-bold text-emerald-400 uppercase">BTP</span>
+                    <h3 class="font-bold text-xl mt-2 mb-4">Pelle Hydraulique 25T</h3>
+                    <div class="text-2xl font-bold text-white mb-6">55,000 USDT.z</div>
+                    <button onclick="connectWallet()" class="w-full bg-emerald-500 py-3 rounded-lg font-bold hover:bg-emerald-400 transition">Commander</button>
                 </div>
             </div>
-            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition">
-                <img src="https://images.unsplash.com/photo-1594498639139-e487477a4a7a?q=80&w=400" class="w-full h-48 object-cover">
+            <div class="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700">
                 <div class="p-6">
-                    <h3 class="font-bold text-xl mb-2">Tracteur 150ch</h3>
-                    <p class="text-slate-500 text-sm mb-4">Polyvalence totale pour grandes cultures et élevage.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-blue-900 font-bold">32,500 USDT.z</span>
-                        <button onclick="connectWallet()" class="bg-emerald-500 text-white px-4 py-2 rounded-lg text-sm font-bold">Acheter</button>
-                    </div>
+                    <span class="text-xs font-bold text-blue-400 uppercase">Matériaux</span>
+                    <h3 class="font-bold text-xl mt-2 mb-4">Lot Béton Cellulaire (Palette)</h3>
+                    <div class="text-2xl font-bold text-white mb-6">1,150 USDT.z</div>
+                    <button onclick="connectWallet()" class="w-full bg-emerald-500 py-3 rounded-lg font-bold hover:bg-emerald-400 transition">Commander</button>
+                </div>
+            </div>
+            <div class="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700">
+                <div class="p-6">
+                    <span class="text-xs font-bold text-orange-400 uppercase">Agriculture</span>
+                    <h3 class="font-bold text-xl mt-2 mb-4">Tracteur Industriel 200ch</h3>
+                    <div class="text-2xl font-bold text-white mb-6">38,000 USDT.z</div>
+                    <button onclick="connectWallet()" class="w-full bg-emerald-500 py-3 rounded-lg font-bold hover:bg-emerald-400 transition">Commander</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="usdtz" class="bg-slate-900 text-white py-16 px-6 text-center">
-        <h2 class="text-3xl font-bold mb-4">Paiement Sécurisé en USDT.z</h2>
-        <p class="mb-8 opacity-80">Notre Stablecoin indexé 1:1 réduit vos frais de transaction de 90%.</p>
-        <div class="text-xs font-mono bg-slate-800 p-4 rounded inline-block">
+    <footer id="usdtz" class="bg-white py-16 px-6 text-center border-t mt-12">
+        <h2 class="text-3xl font-bold mb-4">Réglement en USDT.z</h2>
+        <p class="text-slate-600 mb-8 max-w-xl mx-auto">Le stablecoin natif de PolyBParis pour sécuriser vos échanges internationaux sans frais bancaires excessifs.</p>
+        <div class="text-xs font-mono bg-slate-100 p-4 rounded-lg inline-block border text-slate-700">
             Contrat BSC : 0x3b48292303e9A303cF122e6104C45C367eba043B
         </div>
+        <div class="mt-8 text-slate-400 text-xs uppercase tracking-widest">© 2026 PolyBParis International</div>
     </footer>
 
     <script>
@@ -98,12 +122,12 @@
             if (window.ethereum) {
                 try {
                     await window.ethereum.request({ method: 'eth_requestAccounts' });
-                    alert("Wallet connecté avec succès !");
+                    alert("Connexion réussie ! Votre portefeuille est prêt pour PolyBParis.");
                 } catch (error) {
-                    alert("Erreur de connexion");
+                    alert("La connexion a été annulée.");
                 }
             } else {
-                alert("Veuillez installer Trust Wallet ou MetaMask");
+                alert("Veuillez installer MetaMask ou un portefeuille compatible.");
             }
         }
     </script>
