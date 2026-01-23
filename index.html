@@ -35,10 +35,52 @@
 
     <section id="btp" class="py-16 px-6 max-w-6xl mx-auto">
         <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="bg-slate-200 h-64 rounded-2xl flex items-center justify-center italic text-slate-400 font-bold text-2xl">IMAGE ENGIN BTP</div>
+            <div class="rounded-2xl overflow-hidden shadow-xl">
+                <img src="https://images.unsplash.com/photo-1579412690850-bd41cd0af397?q=80&w=800" alt="Excavatrice BTP" class="w-full h-64 object-cover">
+            </div>
             <div>
                 <h2 class="text-3xl font-bold mb-4">Matériel de Travaux Publics</h2>
                 <p class="text-lg text-slate-600">Pelles hydrauliques, grues, bulldozers. Nous sourçons le meilleur matériel avec une logistique simplifiée.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="agri" class="py-16 px-6 max-w-6xl mx-auto bg-slate-50 rounded-3xl">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1">
+                <h2 class="text-3xl font-bold mb-4">Solutions Agricoles</h2>
+                <p class="text-lg text-slate-600">Tracteurs, moissonneuses et systèmes d'irrigation. Optimisez vos rendements avec notre sélection internationale.</p>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-xl order-1 md:order-2">
+                <img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?q=80&w=800" alt="Tracteur Agricole" class="w-full h-64 object-cover">
+            </div>
+        </div>
+    </section>
+
+    <section id="catalog" class="py-20 px-6 max-w-6xl mx-auto">
+        <h2 class="text-4xl font-extrabold text-center mb-12">Catalogue Matériel</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition">
+                <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?q=80&w=400" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2">Excavatrice 20T</h3>
+                    <p class="text-slate-500 text-sm mb-4">Modèle haute performance, idéal pour chantiers urbains.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-blue-900 font-bold">45,000 USDT.z</span>
+                        <button onclick="connectWallet()" class="bg-emerald-500 text-white px-4 py-2 rounded-lg text-sm font-bold">Acheter</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition">
+                <img src="https://images.unsplash.com/photo-1594498639139-e487477a4a7a?q=80&w=400" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2">Tracteur 150ch</h3>
+                    <p class="text-slate-500 text-sm mb-4">Polyvalence totale pour grandes cultures et élevage.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-blue-900 font-bold">32,500 USDT.z</span>
+                        <button onclick="connectWallet()" class="bg-emerald-500 text-white px-4 py-2 rounded-lg text-sm font-bold">Acheter</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
