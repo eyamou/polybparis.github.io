@@ -3,66 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PolyBParis | Import-Export Global</title>
+    <title>PolyBParis | Import-Export & USDT.z</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-slate-900 font-sans">
 
-    <nav class="flex justify-between items-center px-10 py-5 bg-slate-900 text-white sticky top-0 z-50">
-        <div class="flex items-center gap-4">
-            <img src="logo.svg" alt="Logo" class="w-12 h-12 bg-white rounded-lg p-1">
-            <span class="text-2xl font-bold tracking-tight">PolyBParis</span>
+    <nav class="flex justify-between items-center px-8 py-4 bg-slate-900 text-white sticky top-0 z-50">
+        <div class="flex items-center gap-3">
+            <img src="logo.svg" alt="Logo" class="w-10 h-10 bg-white rounded p-1">
+            <span class="text-xl font-bold">PolyBParis</span>
         </div>
-        <div class="hidden md:flex gap-8 font-medium">
+        <div class="hidden md:flex gap-8 text-sm font-medium">
             <a href="#btp" class="hover:text-emerald-400">BTP & Engins</a>
             <a href="#agri" class="hover:text-emerald-400">Agriculture</a>
             <a href="#materiaux" class="hover:text-emerald-400">Matériaux</a>
         </div>
-        <button onclick="connectWallet()" class="border border-white px-5 py-2 rounded-md hover:bg-white hover:text-slate-900 transition">Espace Paiement USDT.z</button>
+        <button onclick="connectWallet()" class="border border-white px-4 py-2 rounded text-sm hover:bg-white hover:text-slate-900 transition">
+            Espace Paiement USDT.z
+        </button>
     </nav>
 
-    <div class="grid md:grid-cols-3 h-80 overflow-hidden border-b-4 border-emerald-500">
-        <img src="https://images.pexels.com/photos/585418/pexels-photo-585418.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover border-r border-white" alt="BTP">
-        <img src="https://images.pexels.com/photos/2933243/pexels-photo-2933243.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover border-r border-white" alt="Agriculture">
-        <img src="https://images.pexels.com/photos/159353/construction-site-build-construction-work-159353.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover" alt="Matériaux">
+    <div class="grid grid-cols-1 md:grid-cols-3 h-64 md:h-80 border-b-4 border-emerald-500">
+        <div class="h-full overflow-hidden border-r border-white">
+            <img src="https://images.pexels.com/photos/585418/pexels-photo-585418.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover" alt="Engins BTP">
+        </div>
+        <div class="h-full overflow-hidden border-r border-white">
+            <img src="https://images.pexels.com/photos/2933243/pexels-photo-2933243.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover" alt="Agriculture">
+        </div>
+        <div class="h-full overflow-hidden">
+            <img src="https://images.pexels.com/photos/159353/construction-site-build-construction-work-159353.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover" alt="Matériaux">
+        </div>
     </div>
 
-    <section class="py-12 px-6 text-center max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold mb-4">L'expertise à votre service : BTP, Agriculture & Matériaux.</h2>
-        <p class="text-xl text-slate-600 italic">Transactions globales et importations simplifiées via USDT.z.</p>
+    <section class="py-12 px-6 text-center border-b border-slate-100">
+        <h1 class="text-3xl font-bold mb-3">L’expertise à votre service : BTP, Agriculture & Matériaux.</h1>
+        <p class="text-slate-500 italic">Transactions globales et importations simplifiées via USDT.z.</p>
     </section>
 
-    <section id="catalog" class="py-16 px-10 max-w-7xl mx-auto">
-        <h3 class="text-center font-bold text-slate-400 uppercase tracking-widest mb-10">Nos Catalogues</h3>
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
-            <div>
-                <img src="https://cdn-icons-png.flaticon.com/512/2345/2345439.png" class="w-20 mx-auto mb-4 grayscale hover:grayscale-0 cursor-pointer">
-                <p class="font-bold text-sm">ENGINS BTP</p>
+    <section id="catalog" class="py-16 px-6 max-w-6xl mx-auto text-center">
+        <h2 class="text-slate-400 uppercase tracking-widest font-bold text-sm mb-12">Nos Catalogues</h2>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+            <div class="group cursor-pointer">
+                <img src="https://cdn-icons-png.flaticon.com/512/2345/2345439.png" class="w-16 mx-auto mb-4 opacity-70 group-hover:opacity-100 transition">
+                <p class="font-bold text-xs uppercase">Engins BTP</p>
             </div>
-            <div>
-                <img src="https://cdn-icons-png.flaticon.com/512/2555/2555022.png" class="w-20 mx-auto mb-4 grayscale hover:grayscale-0 cursor-pointer">
-                <p class="font-bold text-sm">TRACTEURS</p>
+            <div class="group cursor-pointer">
+                <img src="https://cdn-icons-png.flaticon.com/512/2555/2555022.png" class="w-16 mx-auto mb-4 opacity-70 group-hover:opacity-100 transition">
+                <p class="font-bold text-xs uppercase">Tracteurs</p>
             </div>
-            <div>
-                <img src="https://cdn-icons-png.flaticon.com/512/4205/4205933.png" class="w-20 mx-auto mb-4 grayscale hover:grayscale-0 cursor-pointer">
-                <p class="font-bold text-sm">IRRIGATION</p>
+            <div class="group cursor-pointer">
+                <img src="https://cdn-icons-png.flaticon.com/512/4205/4205933.png" class="w-16 mx-auto mb-4 opacity-70 group-hover:opacity-100 transition">
+                <p class="font-bold text-xs uppercase">Irrigation</p>
             </div>
-            <div>
-                <img src="https://cdn-icons-png.flaticon.com/512/10002/10002010.png" class="w-20 mx-auto mb-4 grayscale hover:grayscale-0 cursor-pointer">
-                <p class="font-bold text-sm">BÉTON CELLULAIRE</p>
+            <div class="group cursor-pointer">
+                <img src="https://cdn-icons-png.flaticon.com/512/10002/10002010.png" class="w-16 mx-auto mb-4 opacity-70 group-hover:opacity-100 transition">
+                <p class="font-bold text-xs uppercase">Béton Cellulaire</p>
             </div>
-            <div>
-                <img src="https://cdn-icons-png.flaticon.com/512/3773/3773833.png" class="w-20 mx-auto mb-4 grayscale hover:grayscale-0 cursor-pointer">
-                <p class="font-bold text-sm">PRÉFABRIQUÉS</p>
+            <div class="group cursor-pointer">
+                <img src="https://cdn-icons-png.flaticon.com/512/3773/3773833.png" class="w-16 mx-auto mb-4 opacity-70 group-hover:opacity-100 transition">
+                <p class="font-bold text-xs uppercase">Préfabriqués</p>
             </div>
         </div>
     </section>
 
-    <footer id="usdtz" class="py-20 bg-slate-50 text-center border-t border-slate-200">
-        <img src="logo.svg" class="w-24 mx-auto mb-6">
-        <h2 class="text-3xl font-bold text-blue-900 mb-2">L'Innovation PolyBParis - Paiement <span class="text-emerald-500">USDT.z</span></h2>
-        <p class="text-slate-500 mb-8">Optimisez vos échanges pour l'import-export, sécurisés avec notre Stablecoin.</p>
-        <div class="bg-white border p-4 rounded-lg inline-block font-mono text-sm shadow-sm">
+    <footer id="usdtz" class="py-20 bg-slate-50 text-center border-t">
+        <img src="logo.svg" class="w-20 mx-auto mb-6">
+        <h2 class="text-2xl font-bold text-slate-900 mb-2">L’Innovation <span class="text-blue-600">PolyParis</span> - Paiement <span class="text-emerald-500">USDT.z</span></h2>
+        <p class="text-slate-500 text-sm mb-8">Optimisez vos échanges pour l'import-export, sécurisés avec notre Stablecoin.</p>
+        <div class="bg-white border p-4 rounded-lg inline-block font-mono text-xs shadow-sm">
             CONTRAT BSC : 0x3b48292303e9A303cF122e6104C45C367eba043B
         </div>
     </footer>
@@ -71,10 +79,10 @@
         function connectWallet() {
             if (window.ethereum) {
                 window.ethereum.request({ method: 'eth_requestAccounts' })
-                .then(() => alert("Connecté à PolyBParis"))
-                .catch(() => alert("Erreur de connexion"));
+                .then(() => alert("Connecté !"))
+                .catch(() => alert("Erreur"));
             } else {
-                alert("Veuillez installer MetaMask");
+                alert("Installez MetaMask");
             }
         }
     </script>
