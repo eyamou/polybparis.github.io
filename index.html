@@ -1,85 +1,69 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolyBParis | Import-Export & Stablecoin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="fr"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;PolyBParis | Import-Export &amp; Stablecoin&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body class="bg-slate-50 text-slate-900 font-sans"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;nav class="flex justify-between items-center p-6 bg-white shadow-sm sticky top-0 z-50"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex items-center gap-3"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;img src="logo.svg" alt="Logo" style="width:32px; height:32px;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="text-2xl font-bold text-blue-900"&gt;PolyB&lt;span class="text-emerald-500"&gt;Paris&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="hidden md:flex gap-8 font-medium"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#btp" class="hover:text-emerald-500"&gt;BTP &amp; Engins&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#agri" class="hover:text-emerald-500"&gt;Agriculture&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#usdtz" class="hover:text-emerald-600 font-bold text-emerald-500"&gt;USDT.z&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="connectWallet()" class="bg-blue-900 text-white px-6 py-2 rounded-full hover:bg-blue-800 transition"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-wallet mr-2"&gt;&lt;/i&gt; Connecter Wallet</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;header class="py-20 px-6 text-center bg-gradient-to-b from-blue-50 to-white"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1 class="text-5xl font-extrabold mb-6 text-slate-800"&gt;L'Import-Export Propulsé par la Blockchain&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-xl text-slate-600 max-w-2xl mx-auto mb-10"&gt;Solutions globales pour le BTP, l'Agriculture et les Matériaux de construction avec paiement sécurisé instantané en USDT.z.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex justify-center gap-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#catalog" class="bg-slate-800 text-white px-8 py-3 rounded-lg font-bold"&gt;Voir le Catalogue&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#usdtz" class="border-2 border-emerald-500 text-emerald-600 px-8 py-3 rounded-lg font-bold"&gt;Découvrir l'USDT.z&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="btp" class="py-16 px-6 max-w-6xl mx-auto"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="grid md:grid-cols-2 gap-12 items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-slate-200 h-64 rounded-2xl flex items-center justify-center italic text-slate-400 font-bold text-2xl"&gt;[IMAGE ENGIN BTP]&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-3xl font-bold mb-4"&gt;Matériel de Travaux Publics&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-lg text-slate-600"&gt;Pelles hydrauliques, grues, bulldozers. Nous sourçons le meilleur matériel pour vos chantiers internationaux avec une logistique simplifiée.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer id="usdtz" class="bg-slate-900 text-white py-16 px-6 text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="text-3xl font-bold mb-6"&gt;Paiement Sécurisé en USDT.z&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="mb-8 opacity-80"&gt;Notre Stablecoin (BSC/TRON) indexé 1:1 réduit vos frais de transaction de 90%.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="text-xs font-mono bg-slate-800 p-4 rounded inline-block"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>Contrat BSC : 0x3b48292303e9A303cF122e6104C45C367eba043B</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>async function connectWallet() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (window.ethereum) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>try {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>await window.ethereum.request({ method: 'eth_requestAccounts' });</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>alert("Wallet connecté avec succès !");</p>
-<p class="p1"><span class="Apple-converted-space">                </span>} catch (error) {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>alert("Erreur de connexion");</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>alert("Veuillez installer Trust Wallet ou MetaMask");</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <nav class="flex justify-between items-center p-6 bg-white shadow-sm sticky top-0 z-50">
+        <div class="flex items-center gap-3">
+            <img src="logo.svg" alt="Logo" style="width:32px; height:32px;">
+            <div class="text-2xl font-bold text-blue-900">PolyB<span class="text-emerald-500">Paris</span></div>
+        </div>
+        <div class="hidden md:flex gap-8 font-medium">
+            <a href="#btp" class="hover:text-emerald-500">BTP & Engins</a>
+            <a href="#agri" class="hover:text-emerald-500">Agriculture</a>
+            <a href="#usdtz" class="hover:text-emerald-500 font-bold text-emerald-500">USDT.z</a>
+        </div>
+        <button onclick="connectWallet()" class="bg-blue-900 text-white px-6 py-2 rounded-full hover:bg-blue-800 transition">
+            <i class="fa-solid fa-wallet mr-2"></i> Connecter Wallet
+        </button>
+    </nav>
+
+    <header class="py-20 px-6 text-center bg-gradient-to-b from-blue-50 to-white">
+        <h1 class="text-5xl font-extrabold mb-6 text-slate-800">L'Import-Export Propulsé par la Blockchain</h1>
+        <p class="text-xl text-slate-600 max-w-2xl mx-auto mb-10">Solutions globales pour le BTP et l'Agriculture avec paiement sécurisé en USDT.z.</p>
+        <div class="flex justify-center gap-4">
+            <a href="#catalog" class="bg-slate-800 text-white px-8 py-3 rounded-lg font-bold">Voir le Catalogue</a>
+            <a href="#usdtz" class="border-2 border-emerald-500 text-emerald-600 px-8 py-3 rounded-lg font-bold">Découvrir l'USDT.z</a>
+        </div>
+    </header>
+
+    <section id="btp" class="py-16 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="bg-slate-200 h-64 rounded-2xl flex items-center justify-center italic text-slate-400 font-bold text-2xl">IMAGE ENGIN BTP</div>
+            <div>
+                <h2 class="text-3xl font-bold mb-4">Matériel de Travaux Publics</h2>
+                <p class="text-lg text-slate-600">Pelles hydrauliques, grues, bulldozers. Nous sourçons le meilleur matériel avec une logistique simplifiée.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="usdtz" class="bg-slate-900 text-white py-16 px-6 text-center">
+        <h2 class="text-3xl font-bold mb-4">Paiement Sécurisé en USDT.z</h2>
+        <p class="mb-8 opacity-80">Notre Stablecoin indexé 1:1 réduit vos frais de transaction de 90%.</p>
+        <div class="text-xs font-mono bg-slate-800 p-4 rounded inline-block">
+            Contrat BSC : 0x3b48292303e9A303cF122e6104C45C367eba043B
+        </div>
+    </footer>
+
+    <script>
+        async function connectWallet() {
+            if (window.ethereum) {
+                try {
+                    await window.ethereum.request({ method: 'eth_requestAccounts' });
+                    alert("Wallet connecté avec succès !");
+                } catch (error) {
+                    alert("Erreur de connexion");
+                }
+            } else {
+                alert("Veuillez installer Trust Wallet ou MetaMask");
+            }
+        }
+    </script>
 </body>
 </html>
