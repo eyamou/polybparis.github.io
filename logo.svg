@@ -1,10 +1,15 @@
-<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="48" fill="white" stroke="#1e3a8a" stroke-width="2"/>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M100 20L170 50V110C170 150 100 180 100 180C100 180 30 150 30 110V50L100 20Z" stroke="#4A90E2" stroke-width="8" fill="white"/>
   
-  <path d="M30 50C30 40 40 35 50 50C60 65 70 60 70 50C70 40 60 35 50 50C40 65 30 60 30 50Z" 
-        stroke="#10b981" stroke-width="6" stroke-linecap="round"/>
+  <path d="M60 100C60 85 85 80 100 100C115 120 140 115 140 100C140 85 115 80 100 100C85 120 60 115 60 100Z" stroke="#4A90E2" stroke-width="6"/>
   
-  <path d="M50 25V35M50 65V75M25 50H35M65 50H75" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M100 80C100 80 110 60 100 50C90 60 100 80 100 80Z" fill="#4A90E2"/>
+  <path d="M90 75C90 75 75 65 70 75C80 85 90 75 90 75Z" fill="#4A90E2"/>
+  <path d="M110 75C110 75 125 65 130 75C120 85 110 75 110 75Z" fill="#4A90E2"/>
   
-  <text x="50" y="57" font-family="Arial" font-size="18" fill="#1e3a8a" text-anchor="middle" font-weight="bold">$</text>
+  <rect x="75" y="130" width="12" height="30" fill="#4A90E2"/>
+  <rect x="94" y="125" width="12" height="35" fill="#4A90E2"/>
+  <rect x="113" y="130" width="12" height="30" fill="#7ED321"/>
+  
+  <text x="128" y="103" font-family="Arial" font-size="12" fill="#4A90E2" font-weight="bold">$</text>
 </svg>
