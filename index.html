@@ -13,39 +13,39 @@
             <img src="logo.svg" alt="Logo" class="w-10 h-10 bg-white rounded p-1">
             <span class="text-xl font-bold">PolyBParis</span>
         </div>
-        <div class="hidden md:flex gap-6 text-[11px] uppercase tracking-widest font-bold">
+        <div class="hidden md:flex gap-6 text-[10px] uppercase tracking-widest font-bold">
             <a href="#btp" class="hover:text-emerald-400 transition">BTP</a>
             <a href="#agri" class="hover:text-emerald-400 transition">Agriculture</a>
             <a href="#materiaux" class="hover:text-emerald-400 transition">Matériaux</a>
-            <a href="#or" class="hover:text-emerald-400 transition text-yellow-400">Or & Métaux</a>
+            <a href="#or" class="hover:text-yellow-400 transition text-yellow-500 underline underline-offset-4">Or & Métaux</a>
         </div>
         <button onclick="connectWallet()" class="border border-white px-4 py-2 rounded text-xs hover:bg-white hover:text-slate-900 transition font-bold">
             Espace Paiement USDT.z
         </button>
     </nav>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 h-[500px] md:h-80 border-b-4 border-emerald-500 bg-slate-100">
-        <div class="h-full overflow-hidden border-r border-white relative group">
+    <div class="grid grid-cols-1 md:grid-cols-4 h-auto md:h-80 border-b-4 border-emerald-500 bg-slate-100">
+        <div class="h-64 md:h-full overflow-hidden border-r border-white relative group">
             <img src="https://images.pexels.com/photos/585418/pexels-photo-585418.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500" alt="BTP">
-            <div class="absolute bottom-4 left-4 text-white font-bold text-xs bg-black/50 px-2 py-1">BTP</div>
+            <div class="absolute bottom-4 left-4 text-white font-bold text-[10px] bg-black/60 px-2 py-1">BTP</div>
         </div>
-        <div class="h-full overflow-hidden border-r border-white relative group">
+        <div class="h-64 md:h-full overflow-hidden border-r border-white relative group">
             <img src="https://images.pexels.com/photos/2933243/pexels-photo-2933243.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500" alt="Agriculture">
-            <div class="absolute bottom-4 left-4 text-white font-bold text-xs bg-black/50 px-2 py-1">AGRICULTURE</div>
+            <div class="absolute bottom-4 left-4 text-white font-bold text-[10px] bg-black/60 px-2 py-1">AGRICULTURE</div>
         </div>
-        <div class="h-full overflow-hidden border-r border-white relative group">
+        <div class="h-64 md:h-full overflow-hidden border-r border-white relative group">
             <img src="https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500" alt="Matériaux">
-            <div class="absolute bottom-4 left-4 text-white font-bold text-xs bg-black/50 px-2 py-1">MATÉRIAUX</div>
+            <div class="absolute bottom-4 left-4 text-white font-bold text-[10px] bg-black/60 px-2 py-1">MATÉRIAUX</div>
         </div>
-        <div class="h-full overflow-hidden relative group">
+        <div class="h-64 md:h-full overflow-hidden relative group" id="or">
             <img src="https://images.pexels.com/photos/47047/gold-ingots-golden-shiny-47047.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500" alt="Or et Métaux">
-            <div class="absolute bottom-4 left-4 text-yellow-400 font-bold text-xs bg-black/70 px-2 py-1 uppercase">Or & Métaux Précieux</div>
+            <div class="absolute bottom-4 left-4 text-yellow-400 font-bold text-[10px] bg-black/80 px-2 py-1 border border-yellow-400">OR & MÉTAUX PRÉCIEUX</div>
         </div>
     </div>
 
     <section class="py-12 px-6 text-center border-b border-slate-100 bg-slate-50">
-        <h1 class="text-3xl font-bold mb-3 italic">BTP, Agriculture, Matériaux & Or.</h1>
-        <p class="text-slate-500">L'expertise PolyBParis au service de vos transactions internationales en USDT.z.</p>
+        <h1 class="text-3xl font-bold mb-3 italic text-slate-800">BTP, Agriculture, Matériaux & Or.</h1>
+        <p class="text-slate-500 max-w-2xl mx-auto">L'expertise PolyBParis au service de vos transactions internationales. Importations sécurisées via notre écosystème USDT.z.</p>
     </section>
 
     <section id="catalog" class="py-16 px-6 max-w-7xl mx-auto text-center">
@@ -78,30 +78,30 @@
                 <a href="#" class="text-[9px] bg-slate-100 border border-slate-300 px-2 py-1 rounded hover:bg-emerald-500 hover:text-white transition whitespace-nowrap">PDF CATALOGUE</a>
             </div>
             <div class="flex flex-col items-center">
-                <img src="https://cdn-icons-png.flaticon.com/512/2451/2451722.png" class="w-14 h-14 mb-4 opacity-100" alt="Or">
+                <img src="https://cdn-icons-png.flaticon.com/512/2451/2451722.png" class="w-14 h-14 mb-4" alt="Or">
                 <p class="font-bold text-[10px] uppercase mb-3 text-yellow-600">Or & Métaux</p>
-                <a href="#" class="text-[9px] bg-yellow-50 border border-yellow-300 px-2 py-1 rounded hover:bg-yellow-500 hover:text-white transition whitespace-nowrap font-bold">PDF CATALOGUE</a>
+                <a href="#" class="text-[9px] bg-yellow-50 border border-yellow-400 px-2 py-1 rounded hover:bg-yellow-500 hover:text-white transition whitespace-nowrap font-bold text-yellow-700">PDF CATALOGUE</a>
             </div>
         </div>
     </section>
 
     <footer id="usdtz" class="py-20 bg-slate-900 text-white text-center">
         <img src="logo.svg" class="w-16 mx-auto mb-6 bg-white rounded p-1">
-        <h2 class="text-2xl font-bold mb-2">Paiement Sécurisé <span class="text-emerald-400">USDT.z</span></h2>
-        <div class="bg-slate-800 border border-slate-700 p-4 rounded-lg inline-block font-mono text-xs mb-4">
+        <h2 class="text-2xl font-bold mb-2 tracking-tight">Paiement Sécurisé <span class="text-emerald-400">USDT.z</span></h2>
+        <div class="bg-slate-800 border border-slate-700 p-4 rounded-lg inline-block font-mono text-xs mb-4 shadow-inner">
             CONTRAT BSC : 0x3b48292303e9A303cF122e6104C45C367eba043B
         </div>
-        <p class="text-slate-500 text-[10px] uppercase tracking-widest">© 2026 PolyBParis International</p>
+        <p class="text-slate-500 text-[9px] uppercase tracking-[0.2em] mt-4">© 2026 PolyBParis International - Excellence & Sécurité</p>
     </footer>
 
     <script>
         function connectWallet() {
             if (window.ethereum) {
                 window.ethereum.request({ method: 'eth_requestAccounts' })
-                .then(() => alert("Connecté !"))
-                .catch(() => alert("Erreur"));
+                .then(() => alert("Connecté à PolyBParis !"))
+                .catch(() => alert("Connexion refusée."));
             } else {
-                alert("Installez MetaMask");
+                alert("Veuillez installer MetaMask ou un portefeuille compatible.");
             }
         }
     </script>
