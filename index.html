@@ -6,99 +6,95 @@
     <title>PolyBParis | Import-Export Global & USDT.z</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Stabilisation des couleurs et des images */
         .btn-emerald { background-color: #10b981 !important; color: white !important; }
         .btn-gold { background-color: #ca8a04 !important; color: white !important; }
-        .banner-img { width: 100%; height: 100%; object-fit: cover; }
-        .text-emerald { color: #10b981 !important; }
+        .banner-img { width: 100%; height: 100%; object-fit: cover; filter: none !important; }
     </style>
 </head>
 <body class="bg-white text-slate-900 font-sans">
 
-    <nav class="flex justify-between items-center px-8 py-4 bg-[#0f172a] text-white sticky top-0 z-50">
+    <nav class="flex justify-between items-center px-8 py-4 bg-[#0f172a] text-white sticky top-0 z-50 shadow-md">
         <div class="flex items-center gap-3">
             <img src="logo.svg" alt="Logo" class="w-10 h-10 bg-white rounded p-1">
             <span class="text-xl font-bold">PolyBParis</span>
         </div>
-        <button class="btn-emerald px-6 py-2 rounded text-xs font-bold uppercase shadow-lg">
+        <button class="btn-emerald px-6 py-2 rounded text-xs font-bold uppercase tracking-tight">
             PAIEMENT USDT.Z
         </button>
     </nav>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 h-auto lg:h-[350px] border-b-4 border-[#10b981] bg-black">
         <div class="relative h-64 lg:h-full border-r border-white/10 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=800" class="banner-img" alt="Pelle BTP">
-            <div class="absolute inset-0 bg-black/30 flex items-end p-6">
+            <img src="https://cdn.pixabay.com/photo/2013/07/18/14/56/excavator-164115_1280.jpg" class="banner-img" alt="Pelle BTP">
+            <div class="absolute inset-0 bg-black/20 flex items-end p-6">
                 <span class="text-white font-bold text-xs uppercase tracking-widest">BTP & Engins</span>
             </div>
         </div>
         <div class="relative h-64 lg:h-full border-r border-white/10 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1530267981675-90de548dec39?auto=format&fit=crop&w=800" class="banner-img" alt="Tracteur">
-            <div class="absolute inset-0 bg-black/30 flex items-end p-6">
+            <img src="https://cdn.pixabay.com/photo/2014/09/11/18/23/tractor-442043_1280.jpg" class="banner-img" alt="Tracteur Agriculture">
+            <div class="absolute inset-0 bg-black/20 flex items-end p-6">
                 <span class="text-white font-bold text-xs uppercase tracking-widest">Agriculture</span>
             </div>
         </div>
         <div class="relative h-64 lg:h-full border-r border-white/10 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1589939705384-5185138a04b9?auto=format&fit=crop&w=800" class="banner-img" alt="Matériaux">
-            <div class="absolute inset-0 bg-black/30 flex items-end p-6">
+            <img src="https://cdn.pixabay.com/photo/2016/11/19/15/39/construction-site-1839934_1280.jpg" class="banner-img" alt="Matériaux de construction">
+            <div class="absolute inset-0 bg-black/20 flex items-end p-6">
                 <span class="text-white font-bold text-xs uppercase tracking-widest">Matériaux</span>
             </div>
         </div>
         <div class="relative h-64 lg:h-full overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=800" class="banner-img" alt="Or">
-            <div class="absolute inset-0 bg-black/20 flex items-end p-6 border-l-4 border-yellow-600">
-                <span class="text-yellow-400 font-bold text-xs uppercase tracking-widest">Or & Métaux</span>
+            <img src="https://cdn.pixabay.com/photo/2016/10/31/15/34/gold-1785897_1280.jpg" class="banner-img" alt="Or">
+            <div class="absolute inset-0 bg-black/10 flex items-end p-6 border-l-4 border-yellow-600">
+                <span class="text-yellow-400 font-bold text-xs uppercase tracking-widest drop-shadow-md">Or & Métaux</span>
             </div>
         </div>
     </div>
 
-    <section class="py-16 px-6 text-center bg-slate-50">
+    <section class="py-16 px-6 text-center bg-slate-50 border-b border-slate-200">
         <h1 class="text-3xl font-bold mb-4 text-slate-800 uppercase">BTP, Agriculture, Matériaux & <span style="color:#ca8a04">Or</span></h1>
-        <p class="text-slate-500 italic max-w-2xl mx-auto">"L'expertise PolyBParis au service de vos transactions internationales en USDT.z."</p>
+        <p class="text-slate-500 italic max-w-2xl mx-auto">
+            "L'expertise PolyBParis au service de vos transactions internationales. Importations sécurisées via l'écosystème USDT.z."
+        </p>
     </section>
 
-    <section id="catalog" class="py-12 px-6 max-w-7xl mx-auto">
-        <h2 class="text-center text-slate-400 uppercase tracking-widest font-bold text-[10px] mb-12">Nos Catalogues Officiels</h2>
-        <div class="grid grid-cols-2 lg:grid-cols-6 gap-6 text-center">
+    <section id="catalog" class="py-20 px-6 max-w-7xl mx-auto">
+        <h2 class="text-center text-slate-400 uppercase tracking-widest font-bold text-[10px] mb-16">Nos Catalogues Officiels</h2>
+        <div class="grid grid-cols-2 lg:grid-cols-6 gap-8 text-center">
             <div>
-                <span class="text-3xl mb-2 block">🏗️</span>
-                <p class="font-bold text-[10px] uppercase mb-3">Engins BTP</p>
-                <a href="#" class="btn-emerald text-[9px] font-bold px-4 py-2 rounded-full uppercase block">PDF CATALOGUE</a>
+                <span class="text-3xl mb-3 block">🏗️</span>
+                <p class="font-bold text-[10px] uppercase mb-4 h-8">Engins BTP</p>
+                <a href="#" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block shadow-sm">PDF Catalogue</a>
             </div>
             <div>
-                <span class="text-3xl mb-2 block">🚜</span>
-                <p class="font-bold text-[10px] uppercase mb-3">Tracteurs</p>
-                <a href="#" class="btn-emerald text-[9px] font-bold px-4 py-2 rounded-full uppercase block">PDF CATALOGUE</a>
+                <span class="text-3xl mb-3 block">🚜</span>
+                <p class="font-bold text-[10px] uppercase mb-4 h-8">Tracteurs</p>
+                <a href="#" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block shadow-sm">PDF Catalogue</a>
             </div>
             <div>
-                <span class="text-3xl mb-2 block">💧</span>
-                <p class="font-bold text-[10px] uppercase mb-3">Irrigation</p>
-                <a href="#" class="btn-emerald text-[9px] font-bold px-4 py-2 rounded-full uppercase block">PDF CATALOGUE</a>
+                <span class="text-3xl mb-3 block">💧</span>
+                <p class="font-bold text-[10px] uppercase mb-3 h-8">Irrigation</p>
+                <a href="#" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block shadow-sm">PDF Catalogue</a>
             </div>
             <div>
-                <span class="text-3xl mb-2 block">🧱</span>
-                <p class="font-bold text-[10px] uppercase mb-3 text-center">Béton Cellulaire</p>
-                <a href="#" class="btn-emerald text-[9px] font-bold px-4 py-2 rounded-full uppercase block">PDF CATALOGUE</a>
+                <span class="text-3xl mb-3 block">🧱</span>
+                <p class="font-bold text-[10px] uppercase mb-4 h-8">Béton Cellulaire</p>
+                <a href="#" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block shadow-sm">PDF Catalogue</a>
             </div>
             <div>
-                <span class="text-3xl mb-2 block">🏠</span>
-                <p class="font-bold text-[10px] uppercase mb-3">Préfabriqués</p>
-                <a href="#" class="btn-emerald text-[9px] font-bold px-4 py-2 rounded-full uppercase block">PDF CATALOGUE</a>
+                <span class="text-3xl mb-3 block">🏠</span>
+                <p class="font-bold text-[10px] uppercase mb-4 h-8">Préfabriqués</p>
+                <a href="#" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block shadow-sm">PDF Catalogue</a>
             </div>
             <div>
-                <span class="text-3xl mb-2 block">💰</span>
-                <p class="font-bold text-[10px] uppercase mb-3 text-yellow-600">Or & Métaux</p>
-                <a href="#" class="btn-gold text-[9px] font-bold px-4 py-2 rounded-full uppercase block shadow-md">PDF CATALOGUE</a>
+                <span class="text-3xl mb-3 block">💰</span>
+                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-yellow-600 font-black">Or & Métaux</p>
+                <a href="#" class="btn-gold text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block shadow-md">PDF Catalogue</a>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 bg-[#0f172a] text-white text-center">
+    <footer class="py-16 bg-[#0f172a] text-white text-center">
         <div class="inline-block bg-slate-800 border border-emerald-500/50 p-4 rounded-xl mb-4">
-            <code class="text-emerald-400 text-xs">0x3b48292303e9A303cF122e6104C45C367eba043B</code>
+            <code class="text-emerald-400 text-xs">CONTRAT : 0x3b48292303e9A303cF122e6104C45C367eba043B</code>
         </div>
-        <p class="text-slate-500 text-[9px] tracking-widest uppercase">© 2026 PolyBParis International</p>
-    </footer>
-
-</body>
-</html>
+        <p class="text-slate-500 text-[9px] tracking-widest uppercase mt
