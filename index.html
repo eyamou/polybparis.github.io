@@ -40,23 +40,61 @@
         <p class="text-slate-500 italic">Transactions globales et importations simplifiées via USDT.z.</p>
     </section>
 
-    <section id="catalog" class="py-16 px-6 max-w-6xl mx-auto text-center">
+    <section id="catalog" class="py-16 px-6 max-w-7xl mx-auto text-center">
         <h2 class="text-slate-400 uppercase tracking-widest font-bold text-sm mb-12">Nos Catalogues Officiels</h2>
         
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10">
+        <div class="grid grid-cols-2 lg:grid-cols-5 gap-8 items-start">
             <div class="flex flex-col items-center">
-                <img src="https://cdn-icons-png.flaticon.com/512/2345/2345439.png" class="w-16 mb-4 opacity-80" alt="BTP">
-                <p class="font-bold text-xs uppercase mb-3 text-slate-700">Engins BTP</p>
-                <a href="#" class="text-[10px] bg-slate-100 border border-slate-300 px-3 py-1 rounded hover:bg-emerald-500 hover:text-white transition">PDF CATALOGUE</a>
+                <img src="https://cdn-icons-png.flaticon.com/512/2345/2345439.png" class="w-16 h-16 mb-4 opacity-80" alt="BTP">
+                <p class="font-bold text-[10px] md:text-xs uppercase mb-3 text-slate-700">Engins BTP</p>
+                <a href="#" class="text-[9px] bg-slate-100 border border-slate-300 px-2 py-1 rounded hover:bg-emerald-500 hover:text-white transition whitespace-nowrap">PDF CATALOGUE</a>
             </div>
 
             <div class="flex flex-col items-center">
-                <img src="https://cdn-icons-png.flaticon.com/512/2555/2555022.png" class="w-16 mb-4 opacity-80" alt="Tracteurs">
-                <p class="font-bold text-xs uppercase mb-3 text-slate-700">Tracteurs</p>
-                <a href="#" class="text-[10px] bg-slate-100 border border-slate-300 px-3 py-1 rounded hover:bg-emerald-500 hover:text-white transition">PDF CATALOGUE</a>
+                <img src="https://cdn-icons-png.flaticon.com/512/2555/2555022.png" class="w-16 h-16 mb-4 opacity-80" alt="Tracteurs">
+                <p class="font-bold text-[10px] md:text-xs uppercase mb-3 text-slate-700">Tracteurs</p>
+                <a href="#" class="text-[9px] bg-slate-100 border border-slate-300 px-2 py-1 rounded hover:bg-emerald-500 hover:text-white transition whitespace-nowrap">PDF CATALOGUE</a>
             </div>
 
             <div class="flex flex-col items-center">
-                <img src="https://cdn-icons-png.flaticon.com/512/4205/4205933.png" class="w-16 mb-4 opacity-80" alt="Irrigation">
-                <p class="font-bold text-xs uppercase mb-3 text-slate-700">Irrigation</p>
-                <a href="#" class="text-[10px] bg-slate
+                <img src="https://cdn-icons-png.flaticon.com/512/4205/4205933.png" class="w-16 h-16 mb-4 opacity-80" alt="Irrigation">
+                <p class="font-bold text-[10px] md:text-xs uppercase mb-3 text-slate-700">Irrigation</p>
+                <a href="#" class="text-[9px] bg-slate-100 border border-slate-300 px-2 py-1 rounded hover:bg-emerald-500 hover:text-white transition whitespace-nowrap">PDF CATALOGUE</a>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/10002/10002010.png" class="w-16 h-16 mb-4 opacity-80" alt="Béton">
+                <p class="font-bold text-[10px] md:text-xs uppercase mb-3 text-slate-700">Béton Cellulaire</p>
+                <a href="#" class="text-[9px] bg-slate-100 border border-slate-300 px-2 py-1 rounded hover:bg-emerald-500 hover:text-white transition whitespace-nowrap">PDF CATALOGUE</a>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/3773/3773833.png" class="w-16 h-16 mb-4 opacity-80" alt="Préfabriqués">
+                <p class="font-bold text-[10px] md:text-xs uppercase mb-3 text-slate-700">Préfabriqués</p>
+                <a href="#" class="text-[9px] bg-slate-100 border border-slate-300 px-2 py-1 rounded hover:bg-emerald-500 hover:text-white transition whitespace-nowrap">PDF CATALOGUE</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="usdtz" class="py-20 bg-slate-50 text-center border-t">
+        <img src="logo.svg" class="w-20 mx-auto mb-6">
+        <h2 class="text-2xl font-bold text-slate-900 mb-2">L’Innovation PolyParis - Paiement <span class="text-emerald-500">USDT.z</span></h2>
+        <div class="bg-white border p-4 rounded-lg inline-block font-mono text-xs shadow-sm text-slate-700 mb-4">
+            CONTRAT BSC : 0x3b48292303e9A303cF122e6104C45C367eba043B
+        </div>
+        <p class="text-slate-400 text-[10px] uppercase tracking-widest">© 2026 PolyBParis International</p>
+    </footer>
+
+    <script>
+        function connectWallet() {
+            if (window.ethereum) {
+                window.ethereum.request({ method: 'eth_requestAccounts' })
+                .then(() => alert("Connecté !"))
+                .catch(() => alert("Erreur"));
+            } else {
+                alert("Installez MetaMask");
+            }
+        }
+    </script>
+</body>
+</html>
