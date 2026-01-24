@@ -5,103 +5,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PolyBParis | Import-Export Global & USDT.z</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gold-glow { text-shadow: 0 0 10px rgba(234, 179, 8, 0.5); }
+        .img-overlay { background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); }
+    </style>
 </head>
 <body class="bg-white text-slate-900 font-sans">
 
-    <nav class="flex justify-between items-center px-8 py-4 bg-slate-900 text-white sticky top-0 z-50">
+    <nav class="flex justify-between items-center px-8 py-4 bg-slate-900 text-white sticky top-0 z-50 shadow-lg">
         <div class="flex items-center gap-3">
             <img src="logo.svg" alt="Logo" class="w-10 h-10 bg-white rounded p-1">
-            <span class="text-xl font-bold">PolyBParis</span>
+            <span class="text-xl font-bold tracking-tight">PolyBParis</span>
         </div>
-        <div class="hidden md:flex gap-6 text-[10px] uppercase tracking-widest font-bold">
+        <div class="hidden lg:flex gap-6 text-[10px] uppercase tracking-widest font-bold">
             <a href="#btp" class="hover:text-emerald-400 transition">BTP</a>
             <a href="#agri" class="hover:text-emerald-400 transition">Agriculture</a>
             <a href="#materiaux" class="hover:text-emerald-400 transition">Matériaux</a>
-            <a href="#or" class="hover:text-yellow-400 transition text-yellow-500 underline underline-offset-4">Or & Métaux</a>
+            <a href="#or" class="text-yellow-500 hover:text-yellow-400 transition border-b border-yellow-500">Or & Métaux</a>
         </div>
-        <button onclick="connectWallet()" class="border border-white px-4 py-2 rounded text-xs hover:bg-white hover:text-slate-900 transition font-bold">
-            Espace Paiement USDT.z
+        <button onclick="connectWallet()" class="bg-emerald-600 hover:bg-emerald-500 px-4 py-2 rounded text-xs transition font-bold uppercase tracking-tighter">
+            Paiement USDT.z
         </button>
     </nav>
 
-    <div class="grid grid-cols-1 md:grid-cols-4 h-auto md:h-80 border-b-4 border-emerald-500 bg-slate-100">
-        <div class="h-64 md:h-full overflow-hidden border-r border-white relative group">
-            <img src="https://images.pexels.com/photos/585418/pexels-photo-585418.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500" alt="BTP">
-            <div class="absolute bottom-4 left-4 text-white font-bold text-[10px] bg-black/60 px-2 py-1">BTP</div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 h-auto lg:h-96 border-b-4 border-emerald-500 bg-slate-900">
+        <div class="relative h-64 lg:h-full overflow-hidden group border-r border-slate-800">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700" alt="BTP">
+            <div class="absolute inset-0 img-overlay flex items-end p-6">
+                <span class="text-white font-black text-sm tracking-widest uppercase">BTP & Engins</span>
+            </div>
         </div>
-        <div class="h-64 md:h-full overflow-hidden border-r border-white relative group">
-            <img src="https://images.pexels.com/photos/2933243/pexels-photo-2933243.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500" alt="Agriculture">
-            <div class="absolute bottom-4 left-4 text-white font-bold text-[10px] bg-black/60 px-2 py-1">AGRICULTURE</div>
+        <div class="relative h-64 lg:h-full overflow-hidden group border-r border-slate-800">
+            <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700" alt="Agriculture">
+            <div class="absolute inset-0 img-overlay flex items-end p-6">
+                <span class="text-white font-black text-sm tracking-widest uppercase">Agriculture</span>
+            </div>
         </div>
-        <div class="h-64 md:h-full overflow-hidden border-r border-white relative group">
-            <img src="https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500" alt="Matériaux">
-            <div class="absolute bottom-4 left-4 text-white font-bold text-[10px] bg-black/60 px-2 py-1">MATÉRIAUX</div>
+        <div class="relative h-64 lg:h-full overflow-hidden group border-r border-slate-800">
+            <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700" alt="Matériaux">
+            <div class="absolute inset-0 img-overlay flex items-end p-6">
+                <span class="text-white font-black text-sm tracking-widest uppercase">Matériaux</span>
+            </div>
         </div>
-        <div class="h-64 md:h-full overflow-hidden relative group" id="or">
-            <img src="https://images.pexels.com/photos/47047/gold-ingots-golden-shiny-47047.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500" alt="Or et Métaux">
-            <div class="absolute bottom-4 left-4 text-yellow-400 font-bold text-[10px] bg-black/80 px-2 py-1 border border-yellow-400">OR & MÉTAUX PRÉCIEUX</div>
+        <div class="relative h-64 lg:h-full overflow-hidden group">
+            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700" alt="Or">
+            <div class="absolute inset-0 bg-yellow-900/20 group-hover:bg-transparent transition duration-700"></div>
+            <div class="absolute inset-0 img-overlay flex items-end p-6">
+                <span class="text-yellow-400 font-black text-sm tracking-widest uppercase gold-glow">Or & Métaux Précieux</span>
+            </div>
         </div>
     </div>
 
-    <section class="py-12 px-6 text-center border-b border-slate-100 bg-slate-50">
-        <h1 class="text-3xl font-bold mb-3 italic text-slate-800">BTP, Agriculture, Matériaux & Or.</h1>
-        <p class="text-slate-500 max-w-2xl mx-auto">L'expertise PolyBParis au service de vos transactions internationales. Importations sécurisées via notre écosystème USDT.z.</p>
+    <section class="py-16 px-6 text-center bg-slate-50">
+        <h1 class="text-3xl md:text-4xl font-black mb-4 text-slate-800 tracking-tighter uppercase">
+            BTP, Agriculture, Matériaux & <span class="text-yellow-600">Or</span>.
+        </h1>
+        <p class="text-slate-500 max-w-2xl mx-auto italic text-lg">
+            "L'expertise PolyBParis au service de vos transactions internationales. Importations sécurisées via l'écosystème USDT.z."
+        </p>
     </section>
 
-    <section id="catalog" class="py-16 px-6 max-w-7xl mx-auto text-center">
-        <h2 class="text-slate-400 uppercase tracking-widest font-bold text-sm mb-12">Nos Catalogues Officiels</h2>
+    <section id="catalog" class="py-20 px-6 max-w-7xl mx-auto">
+        <h2 class="text-center text-slate-400 uppercase tracking-[0.3em] font-bold text-xs mb-16">Nos Catalogues Officiels</h2>
         
-        <div class="grid grid-cols-2 lg:grid-cols-6 gap-6 items-start">
-            <div class="flex flex-col items-center">
-                <img src="https://cdn-icons-png.flaticon.com/512/2345/2345439.png" class="w-14 h-14 mb-4 opacity-80" alt="BTP">
-                <p class="font-bold text-[10px] uppercase mb-3">Engins BTP</p>
-                <a href="#" class="text-[9px] bg-slate-100 border border-slate-300 px-2 py-1 rounded hover:bg-emerald-500 hover:text-white transition whitespace-nowrap">PDF CATALOGUE</a>
+        <div class="grid grid-cols-2 lg:grid-cols-6 gap-8">
+            <div class="flex flex-col items-center group">
+                <div class="p-4 rounded-full bg-slate-50 mb-4 group-hover:bg-emerald-50 transition shadow-sm">
+                    <img src="https://img.icons8.com/ios-filled/50/22c55e/excavator.png" class="w-10 h-10" alt="BTP">
+                </div>
+                <p class="font-bold text-[10px] uppercase mb-3 tracking-tighter">Engins BTP</p>
+                <a href="#" class="text-[9px] font-bold border border-slate-300 px-3 py-1.5 rounded-full hover:bg-emerald-600 hover:border-emerald-600 hover:text-white transition uppercase">Catalogue PDF</a>
             </div>
-            <div class="flex flex-col items-center">
-                <img src="https://cdn-icons-png.flaticon.com/512/2555/2555022.png" class="w-14 h-14 mb-4 opacity-80" alt="Tracteurs">
-                <p class="font-bold text-[10px] uppercase mb-3">Tracteurs</p>
-                <a href="#" class="text-[9px] bg-slate-100 border border-slate-300 px-2 py-1 rounded hover:bg-emerald-500 hover:text-white transition whitespace-nowrap">PDF CATALOGUE</a>
+
+            <div class="flex flex-col items-center group">
+                <div class="p-4 rounded-full bg-slate-50 mb-4 group-hover:bg-emerald-50 transition shadow-sm">
+                    <img src="https://img.icons8.com/ios-filled/50/22c55e/tractor.png" class="w-10 h-10" alt="Tracteurs">
+                </div>
+                <p class="font-bold text-[10px] uppercase mb-3 tracking-tighter">Tracteurs</p>
+                <a href="#" class="text-[9px] font-bold border border-slate-300 px-3 py-1.5 rounded-full hover:bg-emerald-600 hover:border-emerald-600 hover:text-white transition uppercase">Catalogue PDF</a>
             </div>
-            <div class="flex flex-col items-center">
-                <img src="https://cdn-icons-png.flaticon.com/512/4205/4205933.png" class="w-14 h-14 mb-4 opacity-80" alt="Irrigation">
-                <p class="font-bold text-[10px] uppercase mb-3">Irrigation</p>
-                <a href="#" class="text-[9px] bg-slate-100 border border-slate-300 px-2 py-1 rounded hover:bg-emerald-500 hover:text-white transition whitespace-nowrap">PDF CATALOGUE</a>
+
+            <div class="flex flex-col items-center group">
+                <div class="p-4 rounded-full bg-slate-50 mb-4 group-hover:bg-emerald-50 transition shadow-sm">
+                    <img src="https://img.icons8.com/ios-filled/50/22c55e/water-pipe.png" class="w-10 h-10" alt="Irrigation">
+                </div>
+                <p class="font-bold text-[10px] uppercase mb-3 tracking-tighter">Irrigation</p>
+                <a href="#" class="text-[9px] font-bold border border-slate-300 px-3 py-1.5 rounded-full hover:bg-emerald-600 hover:border-emerald-600 hover:text-white transition uppercase">Catalogue PDF</a>
             </div>
-            <div class="flex flex-col items-center">
-                <img src="https://cdn-icons-png.flaticon.com/512/10002/10002010.png" class="w-14 h-14 mb-4 opacity-80" alt="Béton">
-                <p class="font-bold text-[10px] uppercase mb-3">Béton Cellulaire</p>
-                <a href="#" class="text-[9px] bg-slate-100 border border-slate-300 px-2 py-1 rounded hover:bg-emerald-500 hover:text-white transition whitespace-nowrap">PDF CATALOGUE</a>
+
+            <div class="flex flex-col items-center group">
+                <div class="p-4 rounded-full bg-slate-50 mb-4 group-hover:bg-emerald-50 transition shadow-sm">
+                    <img src="https://img.icons8.com/ios-filled/50/22c55e/brick.png" class="w-10 h-10" alt="Béton">
+                </div>
+                <p class="font-bold text-[10px] uppercase mb-3 tracking-tighter text-center">Béton Cellulaire</p>
+                <a href="#" class="text-[9px] font-bold border border-slate-300 px-3 py-1.5 rounded-full hover:bg-emerald-600 hover:border-emerald-600 hover:text-white transition uppercase">Catalogue PDF</a>
             </div>
-            <div class="flex flex-col items-center">
-                <img src="https://cdn-icons-png.flaticon.com/512/3773/3773833.png" class="w-14 h-14 mb-4 opacity-80" alt="Préfabriqués">
-                <p class="font-bold text-[10px] uppercase mb-3">Préfabriqués</p>
-                <a href="#" class="text-[9px] bg-slate-100 border border-slate-300 px-2 py-1 rounded hover:bg-emerald-500 hover:text-white transition whitespace-nowrap">PDF CATALOGUE</a>
+
+            <div class="flex flex-col items-center group">
+                <div class="p-4 rounded-full bg-slate-50 mb-4 group-hover:bg-emerald-50 transition shadow-sm">
+                    <img src="https://img.icons8.com/ios-filled/50/22c55e/precast-concrete.png" class="w-10 h-10" alt="Préfabriqués">
+                </div>
+                <p class="font-bold text-[10px] uppercase mb-3 tracking-tighter">Préfabriqués</p>
+                <a href="#" class="text-[9px] font-bold border border-slate-300 px-3 py-1.5 rounded-full hover:bg-emerald-600 hover:border-emerald-600 hover:text-white transition uppercase">Catalogue PDF</a>
             </div>
-            <div class="flex flex-col items-center">
-                <img src="https://cdn-icons-png.flaticon.com/512/2451/2451722.png" class="w-14 h-14 mb-4" alt="Or">
-                <p class="font-bold text-[10px] uppercase mb-3 text-yellow-600">Or & Métaux</p>
-                <a href="#" class="text-[9px] bg-yellow-50 border border-yellow-400 px-2 py-1 rounded hover:bg-yellow-500 hover:text-white transition whitespace-nowrap font-bold text-yellow-700">PDF CATALOGUE</a>
+
+            <div class="flex flex-col items-center group">
+                <div class="p-4 rounded-full bg-yellow-50 mb-4 group-hover:bg-yellow-100 transition shadow-sm border border-yellow-200">
+                    <img src="https://img.icons8.com/ios-filled/50/eab308/gold-bars.png" class="w-10 h-10" alt="Or">
+                </div>
+                <p class="font-bold text-[10px] uppercase mb-3 tracking-tighter text-yellow-700">Or & Métaux</p>
+                <a href="#" class="text-[9px] font-bold bg-yellow-500 border border-yellow-500 px-3 py-1.5 rounded-full text-white hover:bg-yellow-600 transition uppercase shadow-md">Catalogue PDF</a>
             </div>
         </div>
     </section>
 
-    <footer id="usdtz" class="py-20 bg-slate-900 text-white text-center">
-        <img src="logo.svg" class="w-16 mx-auto mb-6 bg-white rounded p-1">
-        <h2 class="text-2xl font-bold mb-2 tracking-tight">Paiement Sécurisé <span class="text-emerald-400">USDT.z</span></h2>
-        <div class="bg-slate-800 border border-slate-700 p-4 rounded-lg inline-block font-mono text-xs mb-4 shadow-inner">
-            CONTRAT BSC : 0x3b48292303e9A303cF122e6104C45C367eba043B
+    <footer class="py-16 bg-slate-900 text-white text-center border-t border-emerald-500/30">
+        <img src="logo.svg" class="w-16 mx-auto mb-6 bg-white rounded p-1 shadow-xl">
+        <h2 class="text-2xl font-bold mb-6">Paiement Sécurisé <span class="text-emerald-400 italic">USDT.z</span></h2>
+        <div class="inline-block bg-slate-800/50 border border-slate-700 p-4 rounded-xl shadow-inner mb-8">
+            <code class="text-emerald-400 text-xs md:text-sm break-all">0x3b48292303e9A303cF122e6104C45C367eba043B</code>
         </div>
-        <p class="text-slate-500 text-[9px] uppercase tracking-[0.2em] mt-4">© 2026 PolyBParis International - Excellence & Sécurité</p>
+        <p class="text-slate-500 text-[10px] tracking-[0.4em] uppercase">© 2026 PolyBParis International</p>
     </footer>
 
     <script>
         function connectWallet() {
             if (window.ethereum) {
                 window.ethereum.request({ method: 'eth_requestAccounts' })
-                .then(() => alert("Connecté à PolyBParis !"))
-                .catch(() => alert("Connexion refusée."));
+                .then(() => alert("Bienvenue sur l'espace sécurisé PolyBParis"))
+                .catch(() => alert("Connexion refusée"));
             } else {
-                alert("Veuillez installer MetaMask ou un portefeuille compatible.");
+                alert("Veuillez utiliser un navigateur Web3 (MetaMask/Trust)");
             }
         }
     </script>
