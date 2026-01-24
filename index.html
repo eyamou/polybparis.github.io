@@ -41,27 +41,37 @@
     </section>
 
     <section id="catalog" class="py-16 px-6 max-w-6xl mx-auto text-center">
-        <h2 class="text-slate-400 uppercase tracking-widest font-bold text-sm mb-12">Nos Catalogues</h2>
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
-            <div class="group cursor-pointer">
-                <img src="https://cdn-icons-png.flaticon.com/512/2345/2345439.png" class="w-16 mx-auto mb-4 opacity-70 group-hover:opacity-100 transition">
-                <p class="font-bold text-xs uppercase">Engins BTP</p>
+        <h2 class="text-slate-400 uppercase tracking-widest font-bold text-sm mb-12">Nos Catalogues Officiels</h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10">
+            <div class="flex flex-col items-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/2345/2345439.png" class="w-16 mb-4 opacity-80" alt="BTP">
+                <p class="font-bold text-xs uppercase mb-3">Engins BTP</p>
+                <a href="#" class="text-[10px] bg-slate-100 border border-slate-300 px-3 py-1 rounded hover:bg-emerald-500 hover:text-white transition">PDF CATALOGUE</a>
             </div>
-            <div class="group cursor-pointer">
-                <img src="https://cdn-icons-png.flaticon.com/512/2555/2555022.png" class="w-16 mx-auto mb-4 opacity-70 group-hover:opacity-100 transition">
-                <p class="font-bold text-xs uppercase">Tracteurs</p>
+
+            <div class="flex flex-col items-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/2555/2555022.png" class="w-16 mb-4 opacity-80" alt="Tracteurs">
+                <p class="font-bold text-xs uppercase mb-3">Tracteurs</p>
+                <a href="#" class="text-[10px] bg-slate-100 border border-slate-300 px-3 py-1 rounded hover:bg-emerald-500 hover:text-white transition">PDF CATALOGUE</a>
             </div>
-            <div class="group cursor-pointer">
-                <img src="https://cdn-icons-png.flaticon.com/512/4205/4205933.png" class="w-16 mx-auto mb-4 opacity-70 group-hover:opacity-100 transition">
-                <p class="font-bold text-xs uppercase">Irrigation</p>
+
+            <div class="flex flex-col items-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/4205/4205933.png" class="w-16 mb-4 opacity-80" alt="Irrigation">
+                <p class="font-bold text-xs uppercase mb-3">Irrigation</p>
+                <a href="#" class="text-[10px] bg-slate-100 border border-slate-300 px-3 py-1 rounded hover:bg-emerald-500 hover:text-white transition">PDF CATALOGUE</a>
             </div>
-            <div class="group cursor-pointer">
-                <img src="https://cdn-icons-png.flaticon.com/512/10002/10002010.png" class="w-16 mx-auto mb-4 opacity-70 group-hover:opacity-100 transition">
-                <p class="font-bold text-xs uppercase">Béton Cellulaire</p>
+
+            <div class="flex flex-col items-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/10002/10002010.png" class="w-16 mb-4 opacity-80" alt="Béton">
+                <p class="font-bold text-xs uppercase mb-3">Béton Cellulaire</p>
+                <a href="#" class="text-[10px] bg-slate-100 border border-slate-300 px-3 py-1 rounded hover:bg-emerald-500 hover:text-white transition">PDF CATALOGUE</a>
             </div>
-            <div class="group cursor-pointer">
-                <img src="https://cdn-icons-png.flaticon.com/512/3773/3773833.png" class="w-16 mx-auto mb-4 opacity-70 group-hover:opacity-100 transition">
-                <p class="font-bold text-xs uppercase">Préfabriqués</p>
+
+            <div class="flex flex-col items-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/3773/3773833.png" class="w-16 mb-4 opacity-80" alt="Préfabriqués">
+                <p class="font-bold text-xs uppercase mb-3">Préfabriqués</p>
+                <a href="#" class="text-[10px] bg-slate-100 border border-slate-300 px-3 py-1 rounded hover:bg-emerald-500 hover:text-white transition">PDF CATALOGUE</a>
             </div>
         </div>
     </section>
@@ -79,10 +89,10 @@
         function connectWallet() {
             if (window.ethereum) {
                 window.ethereum.request({ method: 'eth_requestAccounts' })
-                .then(() => alert("Connecté !"))
-                .catch(() => alert("Erreur"));
+                .then(() => alert("Portefeuille PolyBParis connecté !"))
+                .catch(() => alert("Connexion refusée."));
             } else {
-                alert("Installez MetaMask");
+                alert("Veuillez installer MetaMask ou un portefeuille compatible.");
             }
         }
     </script>
