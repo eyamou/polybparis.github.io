@@ -1,73 +1,114 @@
-<section id="payment-zone" class="py-20 bg-slate-900 text-white">
-    <div class="max-w-4xl mx-auto px-6">
-        <div class="text-center mb-12">
-            <h2 class="text-2xl font-bold uppercase tracking-widest text-emerald-400">Finaliser votre commande</h2>
-            <p class="text-slate-400 mt-2">Sécurisez votre transaction via la blockchain BSC</p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolyBParis | Import-Export & USDT.z</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .btn-emerald { background-color: #10b981 !important; color: white !important; transition: all 0.3s; }
+        .btn-emerald:hover { background-color: #059669 !important; transform: scale(1.05); }
+        .btn-gold { background-color: #ca8a04 !important; color: white !important; transition: all 0.3s; }
+        .btn-gold:hover { background-color: #a16207 !important; transform: scale(1.05); }
+        .banner-img { width: 100%; height: 100%; object-fit: cover; display: block !important; }
+    </style>
+</head>
+<body class="bg-white text-slate-900 font-sans">
+
+    <nav class="flex justify-between items-center px-8 py-4 bg-[#0f172a] text-white sticky top-0 z-50 shadow-xl">
+        <div class="flex items-center gap-3">
+            <img src="logo.svg" alt="Logo" class="w-10 h-10 bg-white rounded p-1">
+            <span class="text-xl font-bold uppercase tracking-tighter">PolyBParis</span>
         </div>
+        <button class="btn-emerald px-6 py-2 rounded text-xs font-bold uppercase shadow-lg">
+            PAIEMENT USDT.Z
+        </button>
+    </nav>
 
-        <div class="bg-slate-800 rounded-3xl p-8 border border-slate-700 shadow-2xl">
-            <label class="block text-xs font-bold uppercase tracking-widest text-slate-500 mb-6">Sélectionnez votre devise</label>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                <div onclick="selectCrypto('usdtz')" id="opt-usdtz" class="cursor-pointer border-2 border-emerald-500 bg-emerald-500/10 p-4 rounded-2xl flex items-center gap-3 transition-all">
-                    <div class="bg-white p-1 rounded-full"><img src="logo.svg" class="w-6 h-6"></div>
-                    <div>
-                        <p class="font-bold text-sm">USDT.z</p>
-                        <p class="text-[10px] text-emerald-300">Option recommandée</p>
-                    </div>
-                </div>
-
-                <div onclick="selectCrypto('usdt')" id="opt-usdt" class="cursor-pointer border-2 border-slate-700 p-4 rounded-2xl flex items-center gap-3 hover:border-slate-500 transition-all">
-                    <img src="https://cryptologos.cc/logos/tether-usdt-logo.svg?v=024" class="w-8 h-8">
-                    <div>
-                        <p class="font-bold text-sm text-slate-300">USDT (BEP-20)</p>
-                    </div>
-                </div>
-
-                <div onclick="selectCrypto('bnb')" id="opt-bnb" class="cursor-pointer border-2 border-slate-700 p-4 rounded-2xl flex items-center gap-3 hover:border-slate-500 transition-all">
-                    <img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.svg?v=024" class="w-8 h-8">
-                    <div>
-                        <p class="font-bold text-sm text-slate-300">BNB</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="space-y-4 border-t border-slate-700 pt-8">
-                <div class="flex justify-between text-sm">
-                    <span class="text-slate-400">Statut du Wallet</span>
-                    <span id="wallet-status" class="text-red-400 font-bold italic">Non connecté</span>
-                </div>
-                
-                <button onclick="connectAndPay()" class="w-full btn-emerald py-4 rounded-2xl font-bold uppercase tracking-widest text-sm shadow-xl hover:scale-[1.02] transition-transform">
-                    Connecter & Payer
-                </button>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 h-auto lg:h-[350px] border-b-4 border-[#10b981] bg-black">
+        <div class="relative h-64 lg:h-full border-r border-white/10 overflow-hidden">
+            <img src="Pelles et grue.jpg" class="banner-img" alt="BTP">
+            <div class="absolute inset-0 bg-black/30 flex items-end p-6">
+                <span class="text-white font-bold text-xs uppercase tracking-widest">BTP & Engins</span>
             </div>
         </div>
-        
-        <p class="text-center text-[10px] text-slate-500 mt-8 uppercase tracking-widest">
-            Transactions sécurisées par Smart Contract • PolyBParis Group
-        </p>
+        <div class="relative h-64 lg:h-full border-r border-white/10 overflow-hidden">
+            <img src="Tracteur.jpg" class="banner-img" alt="Agriculture">
+            <div class="absolute inset-0 bg-black/30 flex items-end p-6">
+                <span class="text-white font-bold text-xs uppercase tracking-widest">Agriculture</span>
+            </div>
+        </div>
+        <div class="relative h-64 lg:h-full border-r border-white/10 overflow-hidden">
+            <img src="BBC.jpg" class="banner-img" alt="Matériaux">
+            <div class="absolute inset-0 bg-black/30 flex items-end p-6">
+                <span class="text-white font-bold text-xs uppercase tracking-widest">Matériaux</span>
+            </div>
+        </div>
+        <div class="relative h-64 lg:h-full overflow-hidden">
+            <img src="Or.jpg" class="banner-img" alt="Or">
+            <div class="absolute inset-0 bg-black/10 flex items-end p-6 border-l-4 border-yellow-600">
+                <span class="text-yellow-400 font-bold text-xs uppercase tracking-widest drop-shadow-md">Or & Métaux</span>
+            </div>
+        </div>
     </div>
-</section>
 
-<script>
-    function selectCrypto(type) {
-        // Simple logique visuelle pour la démo
-        document.querySelectorAll('[id^="opt-"]').forEach(el => el.classList.remove('border-emerald-500', 'bg-emerald-500/10'));
-        document.getElementById('opt-' + type).classList.add('border-emerald-500', 'bg-emerald-500/10');
-    }
+    <section class="py-16 px-6 text-center bg-slate-50 border-b">
+        <h1 class="text-3xl font-bold mb-4 text-slate-800 uppercase tracking-tight">BTP, AGRICULTURE, MATÉRIAUX & <span class="text-yellow-600">OR</span></h1>
+        <p class="text-slate-500 italic max-w-2xl mx-auto">
+            "L'expertise PolyBParis au service de vos transactions internationales. Importations sécurisées via l'écosystème USDT.z."
+        </p>
+    </section>
 
-    async function connectAndPay() {
-        if (typeof window.ethereum !== 'undefined') {
-            try {
-                const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-                document.getElementById('wallet-status').innerText = "Connecté : " + accounts[0].substring(0,6) + "...";
-                document.getElementById('wallet-status').classList.replace('text-red-400', 'text-emerald-400');
-            } catch (error) {
-                alert("Erreur de connexion wallet");
-            }
-        } else {
-            alert("Merci d'installer MetaMask ou Trust Wallet");
-        }
-    }
-</script>
+    <section id="catalog" class="py-20 px-6 max-w-7xl mx-auto">
+        <h2 class="text-center text-slate-400 uppercase tracking-[0.3em] font-bold text-[10px] mb-8">Nos Catalogues Officiels</h2>
+        
+        <div class="max-w-2xl mx-auto text-center mb-16">
+            <p class="text-slate-600 text-sm leading-relaxed mb-2">
+                Nos catalogues sont mis à jour régulièrement. Pour recevoir plus d'informations ou un catalogue spécifique, merci de nous écrire à :
+            </p>
+            <a href="mailto:info@polybparis.com" class="text-emerald-600 font-bold hover:underline">info@polybparis.com</a>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-6 gap-8 text-center">
+            <div class="flex flex-col items-center">
+                <span class="text-3xl mb-3">🏗️</span>
+                <p class="font-bold text-[10px] uppercase mb-4 h-8">Engins BTP</p>
+                <a href="mailto:info@polybparis.com?subject=Demande Catalogue BTP" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full shadow-md">Demander PDF</a>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-3xl mb-3">🚜</span>
+                <p class="font-bold text-[10px] uppercase mb-4 h-8">Tracteurs</p>
+                <a href="mailto:info@polybparis.com?subject=Demande Catalogue Tracteurs" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full shadow-md">Demander PDF</a>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-3xl mb-3">💧</span>
+                <p class="font-bold text-[10px] uppercase mb-4 h-8">Irrigation</p>
+                <a href="mailto:info@polybparis.com?subject=Demande Catalogue Irrigation" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full shadow-md">Demander PDF</a>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-3xl mb-3">🧱</span>
+                <p class="font-bold text-[10px] uppercase mb-4 h-8">Béton Cellulaire</p>
+                <a href="mailto:info@polybparis.com?subject=Demande Catalogue Béton" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full shadow-md">Demander PDF</a>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-3xl mb-3">🏠</span>
+                <p class="font-bold text-[10px] uppercase mb-4 h-8">Préfabriqués</p>
+                <a href="mailto:info@polybparis.com?subject=Demande Catalogue Préfabriqués" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full shadow-md">Demander PDF</a>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-3xl mb-3">💰</span>
+                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-yellow-600 font-black">Or & Métaux</p>
+                <a href="mailto:info@polybparis.com?subject=Demande Infos Or et Métaux" class="btn-gold text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full shadow-md">Demander PDF</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 bg-[#0f172a] text-white text-center">
+        <div class="inline-block bg-slate-800 border border-emerald-500/30 p-4 rounded-xl mb-4 shadow-inner">
+            <code class="text-emerald-400 text-xs md:text-sm">0x3b48292303e9A303cF122e6104C45C367eba043B</code>
+        </div>
+        <p class="text-slate-500 text-[9px] tracking-widest uppercase mt-4">© 2026 PolyBParis International</p>
+    </footer>
+
+</body>
+</html>
