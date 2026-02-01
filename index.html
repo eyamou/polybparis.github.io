@@ -6,13 +6,13 @@
     <title>PolyBParis | Import-Export & USDT.z Official</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.transak.com/sdk/v1.1/main.js"></script>
     <style>
         .btn-emerald { background-color: #10b981 !important; color: white !important; transition: all 0.3s; }
         .btn-emerald:hover { background-color: #059669 !important; transform: scale(1.05); }
-        .btn-gold { background-color: #ca8a04 !important; color: white !important; transition: all 0.3s; }
-        .btn-gold:hover { background-color: #a16207 !important; transform: scale(1.05); }
+        .btn-blue { background-color: #2563eb !important; color: white !important; transition: all 0.3s; }
+        .btn-blue:hover { background-color: #1d4ed8 !important; transform: scale(1.05); }
         .banner-img { width: 100%; height: 100%; object-fit: cover; display: block !important; filter: brightness(0.8); }
-        /* Classes de base pour les langues */
         .lang-en { display: none !important; }
         .lang-fr { display: inline-block !important; }
     </style>
@@ -21,162 +21,133 @@
 
     <nav class="flex justify-between items-center px-4 md:px-8 py-4 bg-[#0f172a] text-white sticky top-0 z-50 shadow-xl">
         <div class="flex items-center gap-3">
-            <img src="logo.svg" alt="Logo PolyBParis" class="w-8 h-8 md:w-10 md:h-10 bg-white rounded p-1">
+            <img src="logo.svg" alt="Logo" class="w-8 h-8 md:w-10 md:h-10 bg-white rounded p-1">
             <span class="text-lg md:text-xl font-bold uppercase tracking-tighter">PolyBParis</span>
         </div>
-        
         <div class="flex items-center gap-2 md:gap-4">
             <div class="flex bg-slate-800 rounded-full p-1 border border-slate-700 text-[10px] font-bold">
-                <button type="button" onclick="changeLang('fr')" id="btn-fr" class="px-3 py-1 rounded-full bg-emerald-500 text-white">FR</button>
-                <button type="button" onclick="changeLang('en')" id="btn-en" class="px-3 py-1 rounded-full text-slate-400">EN</button>
+                <button onclick="changeLang('fr')" id="btn-fr" class="px-3 py-1 rounded-full bg-emerald-500 text-white">FR</button>
+                <button onclick="changeLang('en')" id="btn-en" class="px-3 py-1 rounded-full text-slate-400">EN</button>
             </div>
-            
-            <a href="#payment-zone" class="btn-emerald px-4 py-2 rounded text-[10px] font-bold uppercase shadow-lg">
-                <span class="lang-fr">PAIEMENT</span><span class="lang-en">PAYMENT</span> USDT.Z
-            </a>
+            <a href="#payment-zone" class="btn-emerald px-4 py-2 rounded text-[10px] font-bold uppercase shadow-lg">PAIEMENT</a>
         </div>
     </nav>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 h-auto lg:h-[350px] border-b-4 border-[#10b981] bg-black">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 h-auto lg:h-[300px] border-b-4 border-emerald-500 bg-black">
         <div class="relative h-48 lg:h-full border-r border-white/10 overflow-hidden">
             <img src="Pelles et grue.jpg" class="banner-img" alt="BTP">
-            <div class="absolute inset-0 bg-black/30 flex items-end p-6 font-bold text-white uppercase text-xs tracking-widest">
-                <span class="lang-fr">BTP & ENGINS</span><span class="lang-en">CONSTRUCTION</span>
-            </div>
+            <div class="absolute inset-0 bg-black/40 flex items-end p-6 font-bold text-white text-[10px] tracking-widest uppercase">BTP & Engins</div>
         </div>
         <div class="relative h-48 lg:h-full border-r border-white/10 overflow-hidden">
             <img src="Tracteur.jpg" class="banner-img" alt="Agriculture">
-            <div class="absolute inset-0 bg-black/30 flex items-end p-6 font-bold text-white uppercase text-xs tracking-widest text-white">AGRICULTURE</div>
+            <div class="absolute inset-0 bg-black/40 flex items-end p-6 font-bold text-white text-[10px] tracking-widest uppercase">Agriculture</div>
         </div>
         <div class="relative h-48 lg:h-full border-r border-white/10 overflow-hidden">
             <img src="BBC.jpg" class="banner-img" alt="Matériaux">
-            <div class="absolute inset-0 bg-black/30 flex items-end p-6 font-bold text-white uppercase text-xs tracking-widest">
-                <span class="lang-fr">MATÉRIAUX</span><span class="lang-en">MATERIALS</span>
-            </div>
+            <div class="absolute inset-0 bg-black/40 flex items-end p-6 font-bold text-white text-[10px] tracking-widest uppercase">Matériaux</div>
         </div>
-        <div class="relative h-48 lg:h-full overflow-hidden">
+        <div class="relative h-48 lg:h-full overflow-hidden border-l-4 border-yellow-600">
             <img src="Or.jpg" class="banner-img" alt="Or">
-            <div class="absolute inset-0 bg-black/10 flex items-end p-6 border-l-4 border-yellow-600 text-yellow-400 font-bold text-xs uppercase tracking-widest">
-                <span class="lang-fr">OR & MÉTAUX</span><span class="lang-en">GOLD & METALS</span>
-            </div>
+            <div class="absolute inset-0 bg-black/20 flex items-end p-6 font-bold text-yellow-500 text-[10px] tracking-widest uppercase">Or & Métaux</div>
         </div>
     </div>
 
-    <section id="payment-zone" class="py-16 bg-[#0f172a] text-white text-center">
-        <div class="max-w-3xl mx-auto px-6">
-            <h2 class="text-2xl font-bold uppercase text-emerald-400 mb-8 tracking-widest">
-                <span class="lang-fr">Paiement Sécurisé USDT.z</span><span class="lang-en">Secure Payment USDT.z</span>
+    <section id="payment-zone" class="py-20 bg-[#0f172a] text-white text-center">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl font-bold uppercase text-emerald-400 mb-2 tracking-widest">
+                <span class="lang-fr">Paiement Sécurisé</span><span class="lang-en">Secure Payment</span>
             </h2>
-            <div class="bg-slate-800/50 p-6 rounded-3xl border border-slate-700 shadow-2xl mb-6">
-                <p class="text-[10px] text-slate-400 uppercase mb-2 font-bold italic">Smart Contract Address</p>
-                <code class="bg-black/50 p-3 rounded block text-emerald-400 text-[10px] md:text-xs mb-6 break-all">0xC67952983C0d7Ecff9993587cc13038606927c09</code>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <a href="Whitepaper-USDTz-POLYB.pdf" target="_blank" class="btn-gold py-3 rounded-xl font-bold uppercase text-[10px] flex items-center justify-center gap-2">
-                        <i class="fas fa-file-pdf"></i> WHITEPAPER
-                    </a>
-                    <button onclick="connectAndPay()" class="btn-emerald py-3 rounded-xl font-bold uppercase text-[10px] tracking-widest">
-                        <span class="lang-fr">Connecter Wallet</span><span class="lang-en">Connect Wallet</span>
+            <p class="text-slate-400 text-xs mb-12 uppercase tracking-widest italic">Visa • Mastercard • AMEX • Crypto</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-slate-800/40 p-8 rounded-3xl border border-blue-500/30 shadow-2xl">
+                    <div class="flex justify-center gap-4 mb-6 text-3xl text-blue-400">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                    </div>
+                    <h3 class="font-bold text-sm uppercase mb-4 tracking-widest">Carte Bancaire / AMEX</h3>
+                    <p class="text-[11px] text-slate-400 mb-8 h-10">
+                        <span class="lang-fr">Achetez des actifs directement avec votre carte de crédit ou Amex via Transak.</span>
+                        <span class="lang-en">Buy assets directly with your credit card or Amex via Transak.</span>
+                    </p>
+                    <button onclick="launchTransak()" class="btn-blue w-full py-4 rounded-xl font-bold uppercase text-[10px] tracking-[0.2em]">
+                        <span class="lang-fr">Payer par Carte</span><span class="lang-en">Pay by Card</span>
+                    </button>
+                </div>
+
+                <div class="bg-slate-800/40 p-8 rounded-3xl border border-emerald-500/30 shadow-2xl">
+                    <div class="flex justify-center gap-4 mb-6 text-3xl text-emerald-400">
+                        <i class="fas fa-wallet"></i>
+                        <i class="fab fa-ethereum"></i>
+                    </div>
+                    <h3 class="font-bold text-sm uppercase mb-4 tracking-widest">Portefeuille Crypto</h3>
+                    <p class="text-[11px] text-slate-400 mb-8 h-10">
+                        <span class="lang-fr">Paiement direct en USDT.z via MetaMask ou Trust Wallet.</span>
+                        <span class="lang-en">Direct payment in USDT.z via MetaMask or Trust Wallet.</span>
+                    </p>
+                    <button onclick="connectAndPay()" class="btn-emerald w-full py-4 rounded-xl font-bold uppercase text-[10px] tracking-[0.2em]">
+                        <span class="lang-fr">Payer en USDT.z</span><span class="lang-en">Pay with USDT.z</span>
                     </button>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="catalog" class="py-20 px-6 max-w-7xl mx-auto">
-        <h2 class="text-center text-slate-400 uppercase tracking-[0.3em] font-bold text-[10px] mb-8 italic">Service Commercial / Sales Department</h2>
-        <div class="max-w-2xl mx-auto text-center mb-16 px-4 text-slate-600 text-sm font-medium">
-            <p class="lang-fr">Pour recevoir nos inventaires à jour ou une offre personnalisée, contactez-nous :</p>
-            <p class="lang-en">To receive our up-to-date inventories or a personalized offer, contact us:</p>
-            <a href="mailto:info@polybparis.com" class="text-emerald-600 font-bold hover:underline">info@polybparis.com</a>
-        </div>
-
-        <div class="grid grid-cols-2 lg:grid-cols-6 gap-8 text-center">
-            <div class="flex flex-col items-center">
-                <span class="text-3xl mb-3">🏗️</span>
-                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-slate-500">BTP / Mach.</p>
-                <a href="mailto:info@polybparis.com?subject=Inquiry BTP" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full">
-                    <span class="lang-fr">DEMANDER</span><span class="lang-en">INQUIRE</span>
-                </a>
-            </div>
-            <div class="flex flex-col items-center">
-                <span class="text-3xl mb-3">🚜</span>
-                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-slate-500">Agriculture</p>
-                <a href="mailto:info@polybparis.com?subject=Inquiry Agriculture" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full">
-                    <span class="lang-fr">DEMANDER</span><span class="lang-en">INQUIRE</span>
-                </a>
-            </div>
-            <div class="flex flex-col items-center">
-                <span class="text-3xl mb-3">💧</span>
-                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-slate-500">Irrigation</p>
-                <a href="mailto:info@polybparis.com?subject=Inquiry Irrigation" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full">
-                    <span class="lang-fr">DEMANDER</span><span class="lang-en">INQUIRE</span>
-                </a>
-            </div>
-            <div class="flex flex-col items-center">
-                <span class="text-3xl mb-3">🧱</span>
-                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-slate-500">Concrete</p>
-                <a href="mailto:info@polybparis.com?subject=Inquiry Materials" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full">
-                    <span class="lang-fr">DEMANDER</span><span class="lang-en">INQUIRE</span>
-                </a>
-            </div>
-            <div class="flex flex-col items-center">
-                <span class="text-3xl mb-3">🏠</span>
-                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-slate-500">Prefab.</p>
-                <a href="mailto:info@polybparis.com?subject=Inquiry Prefab" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full">
-                    <span class="lang-fr">DEMANDER</span><span class="lang-en">INQUIRE</span>
-                </a>
-            </div>
-            <div class="flex flex-col items-center">
-                <span class="text-3xl mb-3">💰</span>
-                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-yellow-600 font-black">Gold / Metals</p>
-                <a href="mailto:info@polybparis.com?subject=Inquiry Gold" class="btn-gold text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full">
-                    <span class="lang-fr">CONTACTER</span><span class="lang-en">CONTACT</span>
-                </a>
+            
+            <div class="mt-12 text-[10px] text-slate-500">
+                <p>Contract: 0xC67952983C0d7Ecff9993587cc13038606927c09</p>
             </div>
         </div>
     </section>
 
-    <footer class="py-16 bg-[#0f172a] text-white text-center">
-        <img src="logo.svg" class="w-12 h-12 mx-auto mb-6 bg-white p-2 rounded shadow-xl">
-        <h3 class="font-bold uppercase mb-2 tracking-widest text-sm">Poly Bat Parisienne Group</h3>
-        <p class="text-slate-400 text-[10px] mb-8 italic">110 BD PONIATOWSKI, 75012 PARIS, FRANCE</p>
-        <div class="flex justify-center gap-10 mb-10 text-emerald-500 text-2xl">
-            <a href="https://www.linkedin.com/in/poly-bat-parisienne-0285613a9" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:info@polybparis.com"><i class="fas fa-envelope"></i></a>
-        </div>
-        <p class="text-slate-600 text-[9px] uppercase tracking-widest border-t border-slate-800 pt-8">
-            © 2026 PolyBParis | Import-Export & Fintech
-        </p>
+    <footer class="py-12 bg-black text-white text-center border-t border-slate-900">
+        <img src="logo.svg" class="w-10 h-10 mx-auto mb-4 bg-white p-1 rounded">
+        <p class="text-[9px] text-slate-500 uppercase tracking-widest italic">Poly Bat Parisienne Group | 110 BD PONIATOWSKI, 75012 PARIS</p>
     </footer>
 
     <script>
+        // LANGUES
         function changeLang(lang) {
-            const frTexts = document.getElementsByClassName('lang-fr');
-            const enTexts = document.getElementsByClassName('lang-en');
-            const btnFr = document.getElementById('btn-fr');
-            const btnEn = document.getElementById('btn-en');
-
-            if (lang === 'fr') {
-                for (let el of frTexts) { el.style.setProperty('display', 'inline-block', 'important'); }
-                for (let el of enTexts) { el.style.setProperty('display', 'none', 'important'); }
-                btnFr.className = "px-3 py-1 rounded-full bg-emerald-500 text-white";
-                btnEn.className = "px-3 py-1 rounded-full text-slate-400";
-            } else {
-                for (let el of frTexts) { el.style.setProperty('display', 'none', 'important'); }
-                for (let el of enTexts) { el.style.setProperty('display', 'inline-block', 'important'); }
-                btnEn.className = "px-3 py-1 rounded-full bg-emerald-500 text-white";
-                btnFr.className = "px-3 py-1 rounded-full text-slate-400";
-            }
+            const fr = document.getElementsByClassName('lang-fr');
+            const en = document.getElementsByClassName('lang-en');
+            const bFr = document.getElementById('btn-fr');
+            const bEn = document.getElementById('btn-en');
+            for (let el of fr) el.style.setProperty('display', lang === 'fr' ? 'inline-block' : 'none', 'important');
+            for (let el of en) el.style.setProperty('display', lang === 'en' ? 'inline-block' : 'none', 'important');
+            bFr.className = lang === 'fr' ? "px-3 py-1 rounded-full bg-emerald-500 text-white" : "px-3 py-1 rounded-full text-slate-400";
+            bEn.className = lang === 'en' ? "px-3 py-1 rounded-full bg-emerald-500 text-white" : "px-3 py-1 rounded-full text-slate-400";
         }
 
+        // TRANSAK (Paiement Carte & Amex)
+        function launchTransak() {
+            const transak = new TransakSDK.default({
+                apiKey: 'VOTRE_CLE_API_TRANSAK', // À obtenir sur dashboard.transak.com
+                environment: 'STAGING', // Changez par 'PRODUCTION' pour les vrais paiements
+                cryptoCurrencyCode: 'USDT',
+                networks: 'bsc',
+                walletAddress: '0x78D6F5516c855C694698fA566790e857b2013856', // Votre adresse de réception
+                themeColor: '10b981',
+                fiatCurrency: 'EUR',
+                defaultFiatAmount: 500,
+            });
+
+            transak.init();
+
+            transak.on(transak.EVENTS.TRANSAK_ORDER_SUCCESSFUL, (orderData) => {
+                alert("Paiement réussi !");
+                transak.close();
+            });
+        }
+
+        // METAMASK
         async function connectAndPay() {
             if (typeof window.ethereum !== 'undefined') {
                 try {
-                    await ethereum.request({ method: 'eth_requestAccounts' });
-                } catch (e) { console.error(e); }
-            } else { alert("Please use MetaMask or Trust Wallet"); }
+                    const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+                    alert("Connecté: " + accounts[0]);
+                } catch (e) { console.log(e); }
+            } else { alert("Installez MetaMask"); }
         }
+
+        window.onload = () => changeLang('fr');
     </script>
 </body>
 </html>
