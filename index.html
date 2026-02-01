@@ -81,7 +81,7 @@
 
     <section class="py-12 bg-slate-50 border-y border-slate-200">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h3 class="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-8">Informations de Transparence</h3>
+            <h3 class="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-8">Informations Officielles</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="p-4 bg-white rounded-xl shadow-sm border border-slate-100">
                     <p class="text-[9px] uppercase font-bold text-slate-400 mb-2">Smart Contract</p>
@@ -89,11 +89,11 @@
                 </div>
                 <div class="p-4 bg-white rounded-xl shadow-sm border border-slate-100">
                     <p class="text-[9px] uppercase font-bold text-slate-400 mb-2">Documentation</p>
-                    <a href="Whitepaper-USDTz-POLYB.pdf" target="_blank" class="text-[10px] font-bold text-blue-600 uppercase hover:underline">Consulter Whitepaper</a>
+                    <a href="Whitepaper-USDTz-POLYB.pdf" target="_blank" class="text-[10px] font-bold text-blue-600 uppercase hover:underline">Whitepaper PDF</a>
                 </div>
                 <div class="p-4 bg-white rounded-xl shadow-sm border border-slate-100">
-                    <p class="text-[9px] uppercase font-bold text-slate-400 mb-2">Liquidité / Eco</p>
-                    <p class="text-[10px] font-bold text-slate-700 uppercase">1,000,000,000 USDT.z</p>
+                    <p class="text-[9px] uppercase font-bold text-slate-400 mb-2">Réseau & Statut</p>
+                    <p class="text-[10px] font-bold text-slate-700 uppercase">BNB Smart Chain (Active)</p>
                 </div>
             </div>
         </div>
@@ -104,74 +104,4 @@
         <div class="grid grid-cols-2 lg:grid-cols-6 gap-8 text-center">
             <div class="flex flex-col items-center">
                 <span class="text-3xl mb-3">🏗️</span>
-                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-slate-500">BTP / Mach.</p>
-                <a href="mailto:info@polybparis.com?subject=BTP" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full">DEMANDER</a>
-            </div>
-            <div class="flex flex-col items-center">
-                <span class="text-3xl mb-3">🚜</span>
-                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-slate-500">Agriculture</p>
-                <a href="mailto:info@polybparis.com?subject=Agriculture" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full">DEMANDER</a>
-            </div>
-            <div class="flex flex-col items-center">
-                <span class="text-3xl mb-3">💧</span>
-                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-slate-500">Irrigation</p>
-                <a href="mailto:info@polybparis.com?subject=Irrigation" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full">DEMANDER</a>
-            </div>
-            <div class="flex flex-col items-center">
-                <span class="text-3xl mb-3">🧱</span>
-                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-slate-500">Concrete</p>
-                <a href="mailto:info@polybparis.com?subject=Materials" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full">DEMANDER</a>
-            </div>
-            <div class="flex flex-col items-center">
-                <span class="text-3xl mb-3">🏠</span>
-                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-slate-500">Prefab.</p>
-                <a href="mailto:info@polybparis.com?subject=Prefab" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full">DEMANDER</a>
-            </div>
-            <div class="flex flex-col items-center">
-                <span class="text-3xl mb-3">💰</span>
-                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-yellow-600 font-black">Gold / Metals</p>
-                <a href="mailto:info@polybparis.com?subject=Gold" class="btn-gold text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full">CONTACTER</a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-12 bg-[#0f172a] text-white text-center">
-        <p class="text-[9px] text-slate-500 uppercase tracking-widest italic mb-2">Poly Bat Parisienne Group | 110 BD PONIATOWSKI, 75012 PARIS</p>
-        <p class="text-[8px] text-slate-600 tracking-widest">© 2026 OFFICIAL DEPLOYMENT - WEB3 READY</p>
-    </footer>
-
-    <script>
-        function changeLang(lang) {
-            const fr = document.getElementsByClassName('lang-fr');
-            const en = document.getElementsByClassName('lang-en');
-            const bFr = document.getElementById('btn-fr');
-            const bEn = document.getElementById('btn-en');
-            for (let el of fr) el.style.setProperty('display', lang === 'fr' ? 'inline-block' : 'none', 'important');
-            for (let el of en) el.style.setProperty('display', lang === 'en' ? 'inline-block' : 'none', 'important');
-            bFr.className = lang === 'fr' ? "px-3 py-1 rounded-full bg-emerald-500 text-white" : "px-3 py-1 rounded-full text-slate-400";
-            bEn.className = lang === 'en' ? "px-3 py-1 rounded-full bg-emerald-500 text-white" : "px-3 py-1 rounded-full text-slate-400";
-        }
-
-        function launchTransak() {
-            const transak = new TransakSDK.default({
-                apiKey: 'votre-cle-api',
-                environment: 'STAGING',
-                cryptoCurrencyCode: 'USDT',
-                networks: 'bsc',
-                walletAddress: '0x78D6F5516c855C694698fA566790e857b2013856',
-                fiatCurrency: 'EUR',
-                themeColor: '10b981'
-            });
-            transak.init();
-        }
-
-        async function connectAndPay() {
-            if (typeof window.ethereum !== 'undefined') {
-                await ethereum.request({ method: 'eth_requestAccounts' });
-            } else { alert("Merci d'utiliser MetaMask"); }
-        }
-
-        window.onload = () => changeLang('fr');
-    </script>
-</body>
-</html>
+                <p class="font-bold text-
