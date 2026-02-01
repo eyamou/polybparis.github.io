@@ -13,6 +13,7 @@
         .btn-blue { background-color: #2563eb !important; color: white !important; transition: all 0.3s; }
         .btn-blue:hover { background-color: #1d4ed8 !important; transform: scale(1.05); }
         .btn-gold { background-color: #ca8a04 !important; color: white !important; transition: all 0.3s; }
+        .btn-gold:hover { background-color: #a16207 !important; transform: scale(1.05); }
         .banner-img { width: 100%; height: 100%; object-fit: cover; display: block !important; filter: brightness(0.8); }
         .lang-en { display: none !important; }
         .lang-fr { display: inline-block !important; }
@@ -20,7 +21,7 @@
 </head>
 <body class="bg-white text-slate-900 font-sans">
 
-    <nav class="flex justify-between items-center px-4 md:px-8 py-4 bg-[#0f172a] text-white sticky top-0 z-50 shadow-xl border-b border-slate-800">
+    <nav class="flex justify-between items-center px-4 md:px-8 py-4 bg-[#0f172a] text-white sticky top-0 z-50 shadow-xl">
         <div class="flex items-center gap-3">
             <img src="logo.svg" alt="Logo" class="w-8 h-8 md:w-10 md:h-10 bg-white rounded p-1">
             <span class="text-lg md:text-xl font-bold uppercase tracking-tighter">PolyBParis</span>
@@ -61,14 +62,14 @@
             <p class="text-slate-400 text-xs mb-12 uppercase tracking-widest italic">Visa • Mastercard • AMEX • Crypto</p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <div class="bg-slate-800/40 p-8 rounded-3xl border border-blue-500/30 shadow-2xl">
+                <div class="bg-slate-800/40 p-8 rounded-3xl border border-blue-500/30 shadow-2xl text-center">
                     <div class="flex justify-center gap-4 mb-6 text-3xl text-blue-400">
                         <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard"></i> <i class="fab fa-cc-amex"></i>
                     </div>
                     <h3 class="font-bold text-sm uppercase mb-4 tracking-widest">Carte Bancaire / AMEX</h3>
                     <button onclick="launchTransak()" class="btn-blue w-full py-4 rounded-xl font-bold uppercase text-[10px] tracking-[0.2em]">PAYER PAR CARTE</button>
                 </div>
-                <div class="bg-slate-800/40 p-8 rounded-3xl border border-emerald-500/30 shadow-2xl">
+                <div class="bg-slate-800/40 p-8 rounded-3xl border border-emerald-500/30 shadow-2xl text-center">
                     <div class="flex justify-center gap-4 mb-6 text-3xl text-emerald-400">
                         <i class="fas fa-wallet"></i> <i class="fab fa-ethereum"></i>
                     </div>
@@ -101,7 +102,62 @@
 
     <section id="catalog" class="py-20 px-6 max-w-7xl mx-auto">
         <h2 class="text-center text-slate-400 uppercase tracking-[0.3em] font-bold text-[10px] mb-12">Service Commercial / Sales Department</h2>
+        
         <div class="grid grid-cols-2 lg:grid-cols-6 gap-8 text-center">
             <div class="flex flex-col items-center">
                 <span class="text-3xl mb-3">🏗️</span>
-                <p class="font-bold text-
+                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-slate-500">BTP / Mach.</p>
+                <a href="mailto:info@polybparis.com?subject=BTP" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full text-center">DEMANDER</a>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-3xl mb-3">🚜</span>
+                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-slate-500">Agriculture</p>
+                <a href="mailto:info@polybparis.com?subject=Agriculture" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full text-center">DEMANDER</a>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-3xl mb-3">💧</span>
+                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-slate-500">Irrigation</p>
+                <a href="mailto:info@polybparis.com?subject=Irrigation" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full text-center">DEMANDER</a>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-3xl mb-3">🧱</span>
+                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-slate-500">Concrete</p>
+                <a href="mailto:info@polybparis.com?subject=Materials" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full text-center">DEMANDER</a>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-3xl mb-3">🏠</span>
+                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-slate-500">Prefab.</p>
+                <a href="mailto:info@polybparis.com?subject=Prefab" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full text-center">DEMANDER</a>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-3xl mb-3">💰</span>
+                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-yellow-600 font-black">Gold / Metals</p>
+                <a href="mailto:info@polybparis.com?subject=Gold" class="btn-gold text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full text-center">CONTACTER</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-[#0f172a] text-white text-center border-t border-slate-800">
+        <p class="text-[9px] text-slate-500 uppercase tracking-widest italic mb-2">Poly Bat Parisienne Group | 110 BD PONIATOWSKI, 75012 PARIS</p>
+        <p class="text-[8px] text-slate-600 tracking-widest uppercase">© 2026 Official Deployment - Web3 Ready</p>
+    </footer>
+
+    <script>
+        function changeLang(lang) {
+            const fr = document.getElementsByClassName('lang-fr');
+            const en = document.getElementsByClassName('lang-en');
+            const bFr = document.getElementById('btn-fr');
+            const bEn = document.getElementById('btn-en');
+            for (let el of fr) el.style.setProperty('display', lang === 'fr' ? 'inline-block' : 'none', 'important');
+            for (let el of en) el.style.setProperty('display', lang === 'en' ? 'inline-block' : 'none', 'important');
+            bFr.className = lang === 'fr' ? "px-3 py-1 rounded-full bg-emerald-500 text-white" : "px-3 py-1 rounded-full text-slate-400";
+            bEn.className = lang === 'en' ? "px-3 py-1 rounded-full bg-emerald-500 text-white" : "px-3 py-1 rounded-full text-slate-400";
+        }
+
+        function launchTransak() {
+            const transak = new TransakSDK.default({
+                apiKey: 'votre-cle-api',
+                environment: 'STAGING',
+                cryptoCurrencyCode: 'USDT',
+                networks: 'bsc',
+                walletAddress: '0x78D6F5
