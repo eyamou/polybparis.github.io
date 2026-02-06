@@ -67,7 +67,11 @@
                         <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard"></i> <i class="fab fa-cc-amex"></i>
                     </div>
                     <h3 class="font-bold text-sm uppercase mb-4 tracking-widest">Carte Bancaire / AMEX</h3>
-                    <button onclick="payerServiceStripe()" class="btn-blue w-full py-4 rounded-xl font-bold uppercase text-[10px] tracking-[0.2em]">PAYER PAR CARTE</button>
+                    
+                    <a href="https://buy.stripe.com/28EaEY4px0Lya6d4JbbQY00" class="btn-blue w-full py-4 rounded-xl font-bold uppercase text-[10px] tracking-[0.2em] block">
+                        PAYER PAR CARTE
+                    </a>
+
                 </div>
                 <div class="bg-slate-800/40 p-8 rounded-3xl border border-emerald-500/30 shadow-2xl text-center">
                     <div class="flex justify-center gap-4 mb-6 text-3xl text-emerald-400">
@@ -132,4 +136,43 @@
             <div class="flex flex-col items-center">
                 <span class="text-3xl mb-3">💰</span>
                 <p class="font-bold text-[10px] uppercase mb-4 h-8 text-yellow-600 font-black">Gold / Metals</p>
-                <a href="mailto:info@polybparis.com?subject=Gold" class="btn-gold text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full text-center
+                <a href="mailto:info@polybparis.com?subject=Gold" class="btn-gold text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full text-center">CONTACTER</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-[#0f172a] text-white text-center border-t border-slate-800">
+        <p class="text-[9px] text-slate-500 uppercase tracking-widest italic mb-2">Poly Bat Parisienne Group | 110 BD PONIATOWSKI, 75012 PARIS</p>
+        <p class="text-[8px] text-slate-600 tracking-widest uppercase">© 2026 Official Deployment - Web3 Ready</p>
+    </footer>
+
+    <script>
+        function changeLang(lang) {
+            const fr = document.getElementsByClassName('lang-fr');
+            const en = document.getElementsByClassName('lang-en');
+            const bFr = document.getElementById('btn-fr');
+            const bEn = document.getElementById('btn-en');
+            for (let el of fr) el.style.setProperty('display', lang === 'fr' ? 'inline-block' : 'none', 'important');
+            for (let el of en) el.style.setProperty('display', lang === 'en' ? 'inline-block' : 'none', 'important');
+            bFr.className = lang === 'fr' ? "px-3 py-1 rounded-full bg-emerald-500 text-white" : "px-3 py-1 rounded-full text-slate-400";
+            bEn.className = lang === 'en' ? "px-3 py-1 rounded-full bg-emerald-500 text-white" : "px-3 py-1 rounded-full text-slate-400";
+        }
+
+        function connectAndPay() {
+             alert('Veuillez installer MetaMask ou un portefeuille Web3 compatible.');
+        }
+
+        // Le code Transak est gardé en réserve
+        function launchTransak() {
+            const transak = new TransakSDK.default({
+                apiKey: 'votre-cle-api',
+                environment: 'STAGING',
+                cryptoCurrencyCode: 'USDT',
+                networks: 'bsc',
+                walletAddress: '0x78D6F5'
+            });
+            transak.init();
+        }
+    </script>
+</body>
+</html>
