@@ -80,4 +80,101 @@
                         <i class="fas fa-wallet"></i> <i class="fab fa-ethereum"></i>
                     </div>
                     <h3 class="font-bold text-sm uppercase mb-4 tracking-widest">Crypto USDT.z</h3>
-                    <button onclick="connectAndPay()" class="btn-emerald w-full py-4 rounded-xl font-bold uppercase text-[10px] tracking-[0.2em]">PAYER EN USDT.
+                    <button onclick="connectAndPay()" class="btn-emerald w-full py-4 rounded-xl font-bold uppercase text-[10px] tracking-[0.2em]">PAYER EN USDT.z</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-slate-50 border-y border-slate-200">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h3 class="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-8">Informations Officielles</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-4 bg-white rounded-xl shadow-sm border border-slate-100">
+                    <p class="text-[9px] uppercase font-bold text-slate-400 mb-2">Smart Contract</p>
+                    <a href="https://bscscan.com/token/0xC67952983C0d7Ecff9993587cc13038606927c09" target="_blank" class="text-[10px] font-mono text-emerald-600 break-all hover:underline">0xC679...7c09</a>
+                </div>
+                <div class="p-4 bg-white rounded-xl shadow-sm border border-slate-100">
+                    <p class="text-[9px] uppercase font-bold text-slate-400 mb-2">Documentation</p>
+                    <a href="Whitepaper-USDTz-POLYB.pdf" target="_blank" class="text-[10px] font-bold text-blue-600 uppercase hover:underline">Whitepaper PDF</a>
+                </div>
+                <div class="p-4 bg-white rounded-xl shadow-sm border border-slate-100">
+                    <p class="text-[9px] uppercase font-bold text-slate-400 mb-2">Réseau & Statut</p>
+                    <p class="text-[10px] font-bold text-slate-700 uppercase">BNB Smart Chain (Active)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="catalog" class="py-20 px-6 max-w-7xl mx-auto">
+        <h2 class="text-center text-slate-400 uppercase tracking-[0.3em] font-bold text-[10px] mb-12">Service Commercial / Sales Department</h2>
+        
+        <div class="grid grid-cols-2 lg:grid-cols-6 gap-8 text-center">
+            <div class="flex flex-col items-center">
+                <span class="text-3xl mb-3">🏗️</span>
+                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-slate-500">BTP / Mach.</p>
+                <a href="mailto:info@polybparis.com?subject=BTP" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full text-center">DEMANDER</a>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-3xl mb-3">🚜</span>
+                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-slate-500">Agriculture</p>
+                <a href="mailto:info@polybparis.com?subject=Agriculture" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full text-center">DEMANDER</a>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-3xl mb-3">💧</span>
+                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-slate-500">Irrigation</p>
+                <a href="mailto:info@polybparis.com?subject=Irrigation" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full text-center">DEMANDER</a>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-3xl mb-3">🧱</span>
+                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-slate-500">Concrete</p>
+                <a href="mailto:info@polybparis.com?subject=Materials" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full text-center">DEMANDER</a>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-3xl mb-3">🏠</span>
+                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-slate-500">Prefab.</p>
+                <a href="mailto:info@polybparis.com?subject=Prefab" class="btn-emerald text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full text-center">DEMANDER</a>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-3xl mb-3">💰</span>
+                <p class="font-bold text-[10px] uppercase mb-4 h-8 text-yellow-600 font-black">Gold / Metals</p>
+                <a href="mailto:info@polybparis.com?subject=Gold" class="btn-gold text-[9px] font-bold px-4 py-2.5 rounded-full uppercase block w-full text-center">CONTACTER</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-[#0f172a] text-white text-center border-t border-slate-800">
+        <p class="text-[9px] text-slate-500 uppercase tracking-widest italic mb-2">Poly Bat Parisienne Group | 110 BD PONIATOWSKI, 75012 PARIS</p>
+        <p class="text-[8px] text-slate-600 tracking-widest uppercase">© 2026 Official Deployment - Web3 Ready</p>
+    </footer>
+
+    <script>
+        function changeLang(lang) {
+            const fr = document.getElementsByClassName('lang-fr');
+            const en = document.getElementsByClassName('lang-en');
+            const bFr = document.getElementById('btn-fr');
+            const bEn = document.getElementById('btn-en');
+            for (let el of fr) el.style.setProperty('display', lang === 'fr' ? 'inline-block' : 'none', 'important');
+            for (let el of en) el.style.setProperty('display', lang === 'en' ? 'inline-block' : 'none', 'important');
+            bFr.className = lang === 'fr' ? "px-3 py-1 rounded-full bg-emerald-500 text-white" : "px-3 py-1 rounded-full text-slate-400";
+            bEn.className = lang === 'en' ? "px-3 py-1 rounded-full bg-emerald-500 text-white" : "px-3 py-1 rounded-full text-slate-400";
+        }
+
+        function connectAndPay() {
+             alert('Veuillez installer MetaMask ou un portefeuille Web3 compatible.');
+        }
+
+        function launchTransak() {
+            const transak = new TransakSDK.default({
+                apiKey: 'votre-cle-api',
+                environment: 'STAGING',
+                cryptoCurrencyCode: 'USDT',
+                networks: 'bsc',
+                walletAddress: '0x78D6F5'
+            });
+            transak.init();
+        }
+    </script>
+</body>
+</html>
