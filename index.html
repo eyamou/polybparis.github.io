@@ -7,14 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/tronweb@4.0.0/dist/TronWeb.js"></script>
+    
     <style>
+        /* Styles Personnalisés */
         .btn-emerald { background-color: #10b981 !important; color: white !important; transition: all 0.3s; }
         .btn-emerald:hover { background-color: #059669 !important; transform: scale(1.05); }
+        
         .btn-blue { background-color: #2563eb !important; color: white !important; transition: all 0.3s; }
         .btn-blue:hover { background-color: #1d4ed8 !important; transform: scale(1.05); }
+        
         .btn-gold { background-color: #ca8a04 !important; color: white !important; transition: all 0.3s; }
         .btn-gold:hover { background-color: #a16207 !important; transform: scale(1.05); }
+        
+        /* Gestion des images */
         .banner-img { width: 100%; height: 100%; object-fit: cover; display: block !important; filter: brightness(0.8); }
+        
+        /* Gestion des langues */
         .lang-en { display: none !important; }
         .lang-fr { display: inline-block !important; }
     </style>
@@ -56,4 +64,19 @@
 
     <section id="payment-zone" class="py-16 bg-[#0f172a] text-white text-center">
         <div class="max-w-5xl mx-auto px-6">
-            <h2 class="text-3xl font-bold uppercase text-emerald-400 mb
+            <h2 class="text-3xl font-bold uppercase text-emerald-400 mb-2 tracking-widest">
+                <span class="lang-fr">Paiement Sécurisé</span><span class="lang-en">Secure Payment</span>
+            </h2>
+            <p class="text-slate-400 text-xs mb-12 uppercase tracking-widest italic">Visa • Mastercard • AMEX • Crypto</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                
+                <div class="bg-slate-800/40 p-8 rounded-3xl border border-blue-500/30 shadow-2xl text-center">
+                    <div class="flex justify-center gap-4 mb-6 text-3xl text-blue-400">
+                        <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard"></i> <i class="fab fa-cc-amex"></i>
+                    </div>
+                    <h3 class="font-bold text-sm uppercase mb-4 tracking-widest">Carte Bancaire / PayPal</h3>
+                    <a href="https://www.paypal.com/ncp/payment/G4X26XBFCZP3L" target="_blank" class="btn-blue w-full py-4 rounded-xl font-bold uppercase text-[10px] tracking-[0.2em] block">
+                        PAYER PAR CARTE
+                    </a>
+                </div>
