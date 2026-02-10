@@ -6,7 +6,6 @@
     <title>PolyBParis | Import-Export & USDT.z Official</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/tronweb@4.0.0/dist/TronWeb.js"></script>
     
     <style>
         /* Couleurs des boutons */
@@ -131,10 +130,9 @@
     </footer>
 
     <script>
-        // Adresse du contrat USDTz
         const CONTRACT_ADDRESS = "TFzvXUmiHzGrqZejc25kma75YDpv1pdeqb";
 
-        // Définition manuelle de la fonction "transfer" pour éviter l'erreur 401
+        // Définition manuelle pour éviter erreur 401
         const ABI = [
             {
                 "constant": false,
@@ -149,37 +147,52 @@
         ];
 
         async function lancerPaiement() {
-            // 1. Petit test pour voir si le bouton réagit
-            console.log("Clic détecté !");
-            document.getElementById('status-msg').innerText = "Démarrage de TronLink...";
+            const statusMsg = document.getElementById('status-msg');
+            statusMsg.innerText = "Connexion TronLink...";
 
-            // 2. Vérifier si TronLink est là
-            if (!window.tronWeb || !window.tronWeb.defaultAddress.base58) {
-                alert("⚠️ TronLink n'est pas détecté !\nOuvrez l'extension et connectez-vous.");
+            // 1. Vérifier si l'extension existe
+            if (!window.tronWeb && !window.tronLink) {
+                alert("❌ ERREUR : Veuillez installer TronLink !");
                 return;
             }
 
             try {
-                // 3. Préparer le contrat
+                // 2. FORCER LA DEMANDE DE CONNEXION (C'est la partie clé pour le serveur)
+                // Cela ouvre une popup demandant "Autoriser ce site ?"
+                if(window.tronLink) {
+                    const res = await window.tronLink.request({ method: 'tron_requestAccounts' });
+                    if(res.code !== 200) {
+                        statusMsg.innerText = "Connexion refusée par l'utilisateur.";
+                        return;
+                    }
+                }
+
+                // Petite pause pour laisser le temps à TronLink de charger l'adresse
+                await new Promise(r => setTimeout(r, 500));
+
+                // 3. Vérification finale
+                if (!window.tronWeb || !window.tronWeb.defaultAddress.base58) {
+                    alert("⚠️ TronLink est verrouillé ! Veuillez entrer votre mot de passe dans l'extension.");
+                    return;
+                }
+
+                // 4. Préparation du paiement
+                statusMsg.innerText = "Préparation de la transaction...";
                 const contract = window.tronWeb.contract(ABI, CONTRACT_ADDRESS);
                 const monAdresse = window.tronWeb.defaultAddress.base58;
-                const montant = "1000000000000000000"; // 1 jeton (18 zéros)
+                const montant = "1000000000000000000"; // 1 USDTz
 
-                document.getElementById('status-msg').innerText = "Veuillez signer la transaction...";
-
-                // 4. Lancer le paiement
-                // Le .send() va forcer l'ouverture de la fenêtre TronLink
+                // 5. Envoi
+                statusMsg.innerText = "✍️ SIGNEZ DANS TRONLINK...";
                 await contract.transfer(monAdresse, montant).send();
 
-                // 5. Succès
-                alert("✅ PAIEMENT RÉUSSI !\n1 USDTz envoyé.");
-                document.getElementById('status-msg').innerText = "Succès ! Transaction validée.";
+                alert("✅ SUCCÈS ! Paiement validé.");
+                statusMsg.innerText = "Paiement Réussi !";
 
             } catch (e) {
-                // 6. Gestion des erreurs
                 console.error(e);
                 alert("❌ Erreur : " + e);
-                document.getElementById('status-msg').innerText = "Erreur ou Annulation.";
+                statusMsg.innerText = "Erreur technique.";
             }
         }
     </script>
